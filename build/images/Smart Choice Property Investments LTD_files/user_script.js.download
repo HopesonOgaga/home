@@ -1,0 +1,644 @@
+// JavaScript Document
+var subdomain_cnb_validation;
+
+function create_account_page(return_url_type){
+	if(return_url_type==0){
+		var return_url = window.location;
+	}
+	else if(return_url_type==1){
+		var return_url = 'default';
+	}
+	
+	if($('#redirect_to').length>0){
+		var return_url = $('#redirect_to').val();
+	}
+	
+	if(div){
+	div.modal('hide');
+	}
+	
+	$.get('create_account.php','returnUrl='+escape(return_url),function(data){
+		var table = '<div id="content_holder">'+data+'</div>';
+		div = bootbox.dialog({
+			animate:false,
+			message: table
+		});
+	});
+	//window.location='create_account.php?returnUrl='+escape(return_url);
+}
+function create_account_page_yps(return_url_type){
+
+	if(div){
+	div.modal('hide');
+	}
+	
+	$.get('template/estate_template_27/create_account.php','notice_id='+return_url_type,function(data){
+		var table = '<div id="content_holder">'+data+'</div>';
+		div = bootbox.dialog({
+			animate:false,
+			message: table
+		});
+	});
+	//window.location='create_account.php?returnUrl='+escape(return_url);
+}
+function validate_user_phone_mobile_number_format(phone_no){
+    var value=phone_no.replace(/[^\d\+]/g,'');
+	$('#phone_number').val(value);
+}
+
+ 
+function signup_user(){
+	var flag = 0; var check_box =0;
+	if(document.getElementById('user_nickname').value==""){
+		document.getElementById('user_nickname').style.background="#F1F1F1";
+		$('#user_nickname').addClass('error');
+		flag =1;
+	}
+	else{
+		document.getElementById('user_nickname').style.background="";
+		$('#user_nickname').removeClass('error');
+	}
+	
+	if(document.getElementById('email_address').value==""){
+		document.getElementById('email_address').style.background="#F1F1F1";
+		$('#email_address').addClass('error');
+		flag =1;
+	}
+	else{
+		document.getElementById('email_address').style.background="";
+		$('#email_address').removeClass('error');
+	}
+	
+	if ($('#phone_number').length==1) {
+	    if(document.getElementById('phone_number').value==""){
+			document.getElementById('phone_number').style.background="#F1F1F1";
+			$('#phone_number').addClass('error');
+			flag =1;
+		}
+		else{
+			document.getElementById('phone_number').style.background="";
+			$('#phone_number').removeClass('error');
+		}
+	}
+	
+	if(eval(document.getElementById('desire_password'))){
+		if(document.getElementById('desire_password').value==""){
+			document.getElementById('desire_password').style.background="#F1F1F1";
+			$('#desire_password').addClass('error');
+			flag =1;
+		}
+		else{
+			document.getElementById('desire_password').style.background="";
+			$('#desire_password').removeClass('error');
+		}
+	}
+	if(eval(document.getElementById('confirm_age'))){
+		if(document.getElementById('confirm_age').checked == false)
+		{
+			document.getElementById('confirm_age').style.border = "1px soild #FF0000";
+			check_box = 1;
+		}
+		else{
+			document.getElementById('confirm_age').style.border = "";
+		}
+	}
+	if(flag==0 && check_box == 0){
+		$('#signup_status').html('Please wait... While submitting...');
+		
+		var vals = $('#signup_form').serialize();
+		$.post('create_user.php', vals, function(data){
+			$('#signup_status').html(data);
+		})
+	}
+	else if(check_box == 1){
+		if(flag==0){
+			$('#signup_status').html('Please check the age confirmation checkbox');
+		}
+		else{
+			if(subdomain_cnb_validation=="kronos2"){
+				$('#signup_status').html('Please check the required fields');
+			}else{
+				$('#signup_status').html('Please check the highlighted fields');
+			}
+		}
+	}
+	else {
+		$('#signup_status').html('Please check the highlighted fields');
+	}
+}
+
+
+function forgot_password_page(){
+	if(div){
+		div.modal('hide');
+	}
+	
+	var table = '<div id="content_holder"></div>';
+	div = bootbox.dialog({
+		animate:false,
+		message: table,
+		onOpen:function(){
+			$('.modal-body').hide();
+			$.get('forgot_password_page.php',function(data){
+				change_lang_response(data, $('#content_holder'), 0);
+				//$('#content_holder').html(data);
+				$('.modal-body').show();
+			});
+		}
+	});
+}
+
+
+
+function forgot_password_check(){
+	var flag = 0;
+	if(document.getElementById('forgot_user_email').value==""){
+		document.getElementById('forgot_user_email').style.background="#F1F1F1";
+		flag =1;
+	}
+	else{
+		document.getElementById('forgot_user_email').style.background="";
+	}
+	
+	if(flag==0){
+		$('#forgot_password_status').html(display_text('Please wait... While submitting...'));
+		var email = $('#forgot_user_email').val();
+		$.post('forgot_password_request.php', {forgot_user_email:email}, function(data){
+			$('#forgot_password_status').html(data);
+		})
+	}
+	else{
+		$('#forgot_password_status').html(display_text('Please enter your email...'));
+	}
+}
+
+function reset_password(){
+	var flag = 0;
+	var error = "";
+	if(document.getElementById('new_password').value==""){
+		document.getElementById('new_password').style.background="#F1F1F1";
+		flag =1;
+		error+=display_text("New password cant be empty");
+	}
+	else{
+		document.getElementById('new_password').style.background="";
+	}
+	
+	if(document.getElementById('confirm_password').value==""){
+		document.getElementById('confirm_password').style.background="#F1F1F1";
+		flag =1;
+		error+=display_text("Confirm password cant be empty");
+	}
+	else{
+		document.getElementById('confirm_password').style.background="";
+	}
+	
+	if(document.getElementById('confirm_password').value!=document.getElementById('new_password').value){
+		document.getElementById('new_password').style.background="#F1F1F1";
+		document.getElementById('confirm_password').style.background="#F1F1F1";
+		flag =1;
+		error+=display_text("Password doesn't match");
+	}
+	else{
+		document.getElementById('new_password').style.background="";
+		document.getElementById('confirm_password').style.background="";
+	}
+	
+	if(flag==0){
+		$('#reset_password_status').html(display_text('Please wait... While submitting...'));
+		var vals = $('#reset_password_form').serialize();
+		$.post('reset_password.php', vals, function(data){
+			$('#reset_password_status').html(data);
+		})
+	}
+	else{
+		$('#reset_password_status').html(error);
+	}
+}
+function login_page_yps(property_slug){
+	if(div){
+		div.modal('hide');
+	}
+
+	$.get('login_page.php','property_slug_yps='+property_slug,function(data){
+		var table = '<div id="content_holder">'+data+'</div>';
+		div = bootbox.dialog({
+			animate:false,
+			message: table,
+			className: 'bootbox_design'
+		});
+	});
+}
+function login_page(redirect_type,property_slug){
+	if(div){
+		div.modal('hide');
+	}
+	
+	if(redirect_type==0){
+		var return_url = 'property/'+property_slug;
+	}else if(redirect_type==1){
+		var return_url = 'book_a_viewing.php?q='+property_slug;
+	}else{
+		var return_url = window.location;
+	}
+	
+	$.get('login_page.php','returnUrl='+escape(return_url),function(data){
+		var table = '<div id="content_holder">'+data+'</div>';
+		div = bootbox.dialog({
+			animate:false,
+			message: table,
+			className: 'bootbox_design'
+		});
+	});
+}
+
+function login_page_compulsary(){
+	if(div){
+		div.modal('hide');
+	}
+	var return_url = window.location;
+	$.get('login_page.php?status=1&'+'returnUrl='+escape(return_url),function(data){
+		var table = '<div id="content_holder">'+data+'</div>';
+		div = bootbox.dialog({
+			animate:false,
+			message: table
+		});
+	});
+}
+
+function forgot_password_page(status){
+	if(div){
+		div.modal('hide');
+	}
+	$.get('forgot_password_page.php', 'status='+status,function(data){
+		var table = '<div id="content_holder">'+data+'</div>';
+		div = bootbox.dialog({
+			animate:false,
+			message: table
+		});
+	});
+}
+
+function login_validation(){
+	var flag = 0;
+	if(document.getElementById('user_email').value==""){
+		document.getElementById('user_email').style.background="#F1F1F1";
+		flag =1;
+	}
+	else{
+		document.getElementById('user_email').style.background="";
+	}
+	
+	if(document.getElementById('user_password').value==""){
+		document.getElementById('user_password').style.background="#F1F1F1";
+		flag =1;
+	}
+	else{
+		document.getElementById('user_password').style.background="";
+	}
+	
+	if(flag==0){
+		var vals = $('#login_form').serialize();
+		$.post('login_validation.php', vals, function(data){
+			//$('#login_status').html(data);
+			var info = jQuery.parseJSON(data);
+            if(info.success){
+            	if(info.admin){
+            		window.location="./admin";
+            	}
+            	else if(info.make_offer_form){
+            		if(div){
+						div.modal('hide');
+					}
+					
+					call_make_an_offer('1',info.make_offer_applicant_id);
+            	}
+            	else if(info.multiple){
+            		div.modal('hide');
+            		view_login(info.ref_url);
+            	}
+            	else if(info.ref_url!=""){
+            		window.location=info.ref_url;
+            	}
+            	else{
+            		location.reload();
+            	}
+                
+            }
+            else{
+            	$('#login_status').html(info.response);
+            }
+		})
+	}
+	else{
+		$('#login_status').html(display_text('Invalid email or password'));
+	}
+}
+
+function view_login(ref_url){
+	
+	var table = '<div id="content_holder"><div class="loading">Loading... Please wait...</div></div>';
+	div = bootbox.dialog({
+		message: table,
+		animate:false,
+		onOpen : function(){
+			$.post('includes/login_check_file.php',{ref_url:ref_url}, function(data){
+				$('#content_holder').html(data);
+			});
+		}
+	}).attr("id", "website_popup");
+}
+ 
+
+function activate_and_login(){
+	var flag = 0;
+	if(document.getElementById('user_enc').value==""){
+		document.getElementById('user_enc').style.background="#F1F1F1";
+		flag =1;
+	}
+	else{
+		document.getElementById('user_enc').style.background="";
+	}
+	
+	if(document.getElementById('user_password').value==""){
+		document.getElementById('user_password').style.background="#F1F1F1";
+		flag =1;
+	}
+	else{
+		document.getElementById('user_password').style.background="";
+	}
+	
+	
+	
+	if(flag==0){
+		var vals = $('#login_form').serialize();
+		$.post('login_activation.php', vals, function(data){
+			$('#login_status').html(data);
+		})
+	}
+	else{
+		$('#login_status').html(display_text('Invalid email or password'));
+	}
+}
+
+
+
+function clear_cookie(){
+	$.post('clear_cookie.php', function(){
+		$('#cookie_preview').html(display_text('Email'));
+		$('#user_email').val('');
+		$('#user_email').attr('type', 'text');
+	});
+}
+
+function clear_cookie_login(){
+	$.post('clear_cookie.php', function(){
+		$('#user_email').remove();
+		var html = '<div class="sminputs">'
+                  +'<div class="input full">'
+                    +'<label class="string optional" for="user-name">Email*</label>'
+                   +' <input class="string optional" maxlength="255" id="user_email" name="user_email" onkeypress="return isEnterKeyForLogin(event)" placeholder="Email" type="email" size="50" />'
+                  +'</div>'
+                +'</div>';
+		$('#cookie_preview').html(html);
+	});
+}
+
+
+function update_user(){
+	var flag = 0;
+	if(document.getElementById('first_name').value==""){
+		document.getElementById('first_name').style.background="#F1F1F1";
+		flag =1;
+	}
+	else{
+		document.getElementById('first_name').style.background="";
+	}
+	
+	if(document.getElementById('last_name').value==""){
+		document.getElementById('last_name').style.background="#F1F1F1";
+		flag =1;
+	}
+	else{
+		document.getElementById('last_name').style.background="";
+	}
+	
+	if(document.getElementById('nick_name').value==""){
+		document.getElementById('nick_name').style.background="#F1F1F1";
+		flag =1;
+	}
+	else{
+		document.getElementById('nick_name').style.background="";
+	}
+	
+		
+	
+	
+	if(flag==0){
+		$('#update_status').html(display_text('Please wait... While submitting...'));
+		var vals = $('#user_form').serialize();
+		$.post('update_user.php', vals, function(data){
+			$('#update_status').html(data);
+		})
+	}
+	else{
+		$('#update_status').html(display_text('Please check the highlighted fields'));
+	}
+}
+
+
+function chage_cover_page(){
+	$.get('change_cover_page.php',function(data){
+		var table = '<div id="content_holder">'+data+'</div>';
+		div = bootbox.dialog({
+			animate:false,
+			message: table
+		});
+	});
+}
+
+function select_cover(cover_path){
+	$.post('update_cover_image.php', {cover_path:cover_path}, function(data){
+		$('#user_cover_holder img').attr('src', data);
+		div.modal('hide');
+	});
+}
+
+function toggle_screens(boxToShow,boxToHide,boxToHide1 ){
+	
+	$('#'+boxToShow).show();
+	$('#'+boxToHide).hide();
+	$('#'+boxToHide1).hide();
+	
+}
+
+function insert_message(){
+	var flag = 0;
+	var error = "";
+	
+	
+	if(document.getElementById('message_subject').value==""){
+		document.getElementById('message_subject').style.background="#F1F1F1";
+		flag = 1;
+		error+=display_text("Subject can't be empty")+"<br>";
+	}
+	else{
+		document.getElementById('message_subject').style.background="";
+	}
+	
+	if(document.getElementById('message_content').value==""){
+		document.getElementById('message_content').style.background="#F1F1F1";
+		flag = 1;
+		error+=display_text("Content can't be empty")+"<br>";
+	}
+	else{
+		document.getElementById('message_content').style.background="";
+	}
+	
+	if(flag==0){
+		$('#message_status').html('');
+		document.getElementById('submit_btn').style.display="none";
+		$('#submit_status').attr('class', 'alert alert-warning open');
+		$('#submit_status').html(display_text('<i class="icon-spin4 animate-spin"></i>&nbsp;Please wait... While sending message...'));
+		var vals = $('#message_form').serialize();
+		$.post('insert_message.php', vals, function(data){
+			var info = jQuery.parseJSON(data);
+			if(info.success){
+				setTimeout(function(){ 
+				$("#message_form")[0].reset();
+				document.getElementById('submit_btn').style.display="inline-block";$('#submit_status').removeClass();$('#submit_status').html(info.response);div.modal('hide'); }, 3000);
+				internal_message_notification(info.msg_id,info.to_user_enc);
+			}else{
+				$('#submit_status').html('Message sending failed');
+			}
+		});
+	}
+	else{
+		$('#message_status').html(error);
+	}
+}
+function send_group_message(){
+	var flag = 0;
+	var error = "";
+	if(document.getElementById('message_content').value==""){
+		document.getElementById('message_content').style.background="#F1F1F1";
+		flag = 1;
+		error+=display_text("Content can't be empty")+"<br>";
+	}
+	else{
+		document.getElementById('message_content').style.background="";
+	}
+	
+	if(flag==0){
+		$('#grp_message_status').html('');
+		document.getElementById('submit_btn').style.display="none";
+		$('#grp_submit_status').attr('class', 'alert alert-warning open');
+		$('#grp_submit_status').html(display_text('<i class="icon-spin4 animate-spin"></i>&nbsp;Please wait... While sending message...'));
+		var vals = $('#message_form').serialize();
+		$.post('insert_group_message.php', vals, function(data){
+			var info = jQuery.parseJSON(data);
+			if(info.success){
+				setTimeout(function(){ 
+				$("#message_form")[0].reset();
+				document.getElementById('submit_btn').style.display="inline-block";
+				$('#grp_submit_status').removeClass();$('#grp_submit_status').html(info.response);div.modal('hide'); }, 3000);
+				//internal_message_notification(info.msg_id,info.to_user_enc);
+			}else{
+				$('#grp_submit_status').html('Message sending failed');
+			}
+		});
+	}
+	else{
+		$('#grp_message_status').html(error);
+	}
+}
+function view_member_page(uslug){
+	var url = baseurl+'/member.php?q='+uslug;
+	var win = window.open(url, '_blank');
+  	win.focus();
+}
+
+function toggle_top_info_box(){
+	$('.top_info_box').toggleClass('active');
+}
+
+function view_cnb_notice(nslug){
+	window.location='notice.php?q='+nslug;
+}
+
+function resend_activation_link(){
+	$.post('resend_activation_link.php', function(){
+		bootbox.alert("Activation link sent to your email.");
+	});
+}
+
+
+function change_password_submit(){
+	var opass = document.getElementById('user_current_password').value;
+	var pass = document.getElementById('user_password').value;
+	var cpass = document.getElementById('user_confirm_password').value;
+	if(pass==cpass && pass!="" && cpass!="" && opass!="")
+	{
+		var url = "password_reset_submit.php";
+		document.getElementById('pwd_btn').style.display="none";
+		$('#pwd_status').attr('class', 'alert alert-warning open');
+		$('#pwd_status').html(display_text('Submitting... Please wait...'));
+		$.post(url,{password : pass, current_password:opass}, function(data){
+		var info = jQuery.parseJSON(data);
+		if(info.success){
+		document.change_password_form.reset();
+		//console.log(info.response);
+		$('#pwd_msg').html(display_text(info.response));
+		setTimeout(function(){ $('#pwd_status').attr('class', '');$('#pwd_status').html('');document.getElementById('pwd_btn').style.display="block"; }, 500);
+		}
+		else{
+			$('#pwd_msg').html('');
+			document.getElementById('pwd_btn').style.display="block"
+			document.getElementById('pwd_status').innerHTML='<strong style="color:#ff0000;">'+display_text(info.response)+'</strong>';
+		}
+		});
+	}
+	else
+	{
+		$('#pwd_msg').html('');
+		document.getElementById('pwd_status').innerHTML='<strong style="color:#ff0000;">'+display_text("Sorry!!! Your Password doesn't match or field is empty!!")+'</strong>';
+	}
+}
+
+function isEnterKeyForChangePassword(evt){
+var charCode = (evt.which) ? evt.which : evt.keyCode
+if (charCode ==13)
+change_password_submit();
+return true;
+} 
+
+
+var isMobile = false; //initiate as false
+// device detection
+if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4)))
+isMobile = true;
+
+
+function register_an_enquiry(){
+	if(div){
+		div.modal('hide');
+	}
+	var url = window.location.href;
+		
+		
+	//var q = url.split('property').pop().split('/').pop();
+	if(location.href.indexOf('?') == -1){
+		var q = url.split('property/').pop();
+	}else{
+		var q = (new RegExp('[\?&]q=([^&#]*)').exec(window.location.href))[1];
+	}
+
+	$.get('register_an_enquiry.php',{q:q},function(data){
+		var table = '<div id="content_holder">'+data+'</div>';
+		div = bootbox.dialog({
+			animate:false,
+			message: table
+		});
+	});
+}
+

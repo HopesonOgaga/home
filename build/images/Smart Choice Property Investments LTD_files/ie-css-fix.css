@@ -1,0 +1,35 @@
+.ie .common_button{ 
+	background:#468F0F;
+}
+
+.ie .search_btn{
+	background:#468F0F;
+}
+.ie .directory_alphebet{
+	background:#468F0F;
+}
+.ie .directory_alphebet.active {
+    background: #000;
+    color: #fff;
+}
+.ie menu {
+    background: #468F0F;
+}
+/* price tag for estate*/
+.ie .tags a {
+    background: #468F0F;
+}
+.ie .price-tag a::before {
+    border-color: transparent #468F0F transparent transparent;
+}
+/* mobile menu */
+@media (max-width:800px){
+	.ie .site_menu ul li a i::before{
+		line-height: 40px;
+	}
+}
+@media (max-width:480px){
+	.ie .site_menu{
+		background: #468F0F;
+	}
+}
