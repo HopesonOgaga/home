@@ -8,64 +8,134 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Fira+Sans:wght@200&family=Playfair+Display&family=Poppins:wght@100&family=Quicksand:wght@300&family=Roboto&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <script src="./js/main.js" defer></script>
     <title>Document</title>
 </head>
 <body class="font-playfair">
-    <header class=" mb-10 wall h-screen pr-6 pl-6">
-        <style>
-            .wall{
-                background-image: url(./images/wallpaper/bedroom-3778695_1280.jpg);
-                background-repeat: no-repeat;
-                background-size: 100% 100%;
-            }
-        </style>
-        <section class="flex justify-between  w-full py-12 ">
-            
-            <div class="border-solid border-2 w-28 h-full bg-transparent ">
-                <img class=" bg-transparent " src="./images/logo_arch.png" alt="image" srcset="" />
-              </div>
-          <div class="flex gap-4 text-white ">
-            <a href="index.html" target="_self" class="capitalize font-semibold  text-xl">home</a>
-            <a href="about.html" target="_self" class="capitalize font-semibold  text-xl ">about us</a>
-            <a href="company_tenants.html" target="_self" class="capitalize font-semibold  text-xl ">company tenants</a>
-            <a href="landlord.html" target="_self" class="capitalize font-semibold  text-xl ">for landlords</a>
-            <a href="#" class="capitalize font-semibold text-xl ">Documentation</a>
-            <a href="#" class="capitalize font-semibold  text-xl ">more +</a>
-          </div>
-          <div class="flex gap-6 ">
-            <input class="w-24 h-12 bg-yellow-400 border-solid border-2 rounded-sm shadow-sm capitalize font-semibold text-lg text-white  " type="button" value="register" />
-            <input class="w-24  h-12 bg-purple-400 border-solid border-2 rounded-sm shadow-sm  capitalize font-semibold text-lg text-white  " type="button" value="login" />
-          </div>
-        </section>
-        <section class="flex flex-col gap-20 justify-center items-center">
-            <a href="#" class="capitalize text-4xl text-center font-semibold text-white">for landlords</a>
-        </section>
-      </header>
-      <main class="ml-20 mr-20">
+  <header class="mb-10 h-64  wall md:h-screen pl-6 pr-6">
+    <style>
+      .wall {
+        background-image: url(./images/wallpaper/castle-458058_1280.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+    </style>
+    <section class="flex justify-between w-full md:py-12">
+      <div class="border-solid border-2 w-1/6  md:w-28 h-full bg-transparent  md:block">
+        <img
+          class="bg-transparent"
+          src="./images/logo_arch.png"
+          alt="image"
+          srcset=""
+        />
+      </div>
+      <div class="flex gap-10  text-white md:block hidden capitalize ">
+        <a
+          href="index.html"
+          target="_self"
+          class="capitalize font-semibold text-xl"
+          >home</a
+        >
+        <a
+          href="about.html"
+          target="_self"
+          class="capitalize font-semibold text-xl"
+          >about us</a
+        >
+        <a
+          href="company_tenants.html"
+          target="_self"
+          class="capitalize font-semibold text-xl"
+          >company tenants</a
+        >
+        <a
+          href="landlord.html"
+          target="_self"
+          class="capitalize font-semibold text-xl"
+          >for landlords</a
+        >
+        <a href="#" class="capitalize font-semibold text-xl">Documentation</a>
+        <a href="#" class="capitalize font-semibold text-xl">more +</a>
+      </div>
+      <div class="flex gap-6 md:block hidden ">
+        <input
+          class="w-24 h-12 bg-purple-400 border-solid border-2 rounded-sm shadow-sm capitalize font-semibold text-lg text-white"
+          type="button"
+          value="register"
+        />
+        <input
+          class="w-24 h-12 bg-purple-400 border-solid border-2 rounded-sm shadow-sm capitalize font-semibold text-lg text-white"
+          type="button"
+          value="login"
+        />
+      </div>
+      <!-- mobile view -->
+      <div class="md:hidden transition-all ease-in duration-500 absolute right-0">
+        <img src="./icons/menu-bar.png" class="w-10 open-menu " alt="">
+        <img src="./icons/menu-close.png" class="w-10 close-menu hidden " alt="">
+      </div>
+      <div class="  menu-options flex flex-col z-50 border-2 ml-0 mr-0  transition-all ease-in duration-500  border-solid rounded-sm shadow-sm py-10 mt-14  items-center w-screen h-full bg-purple-700  gap-10  text-white md:hidden opacity-90  capitalize ">
+        <a
+          href="index.html"
+          target="_self"
+          class="capitalize font-semibold text-xl"
+          >home</a
+        >
+        <a
+          href="about.html"
+          target="_self"
+          class="capitalize font-semibold text-xl"
+          >about us</a
+        >
+        <a
+          href="company_tenants.html"
+          target="_self"
+          class="capitalize font-semibold text-xl"
+          >company tenants</a
+        >
+        <a
+          href="landlord.html"
+          target="_self"
+          class="capitalize font-semibold text-xl"
+          >for landlords</a
+        >
+        <a href="#" class="capitalize font-semibold text-xl">Documentation</a>
+        <a href="#" class="capitalize font-semibold text-xl">more +</a>
+      </div>
+    </section>
+    <section class="flex flex-col mt-10  md:gap-20 justify-center items-center">
+      <a
+        href="#"
+        class="uppercase md:text-4xl text-xl  text-center font-medium md:font-semibold text-white"
+        >company tenants</a
+      >
+    </section>
+  </header>
+      <main class="md:ml-20 md:mr-20 mr-8 ml-8 ">
            <section>
               <div>
-                <p class="text-4xl font-semibold uppercase text-yellow-400">
+                <p  class="md:text-4xl text-lg font-medium  md:font-semibold uppercase text-purple-400">
                   landlords
                 </p>
-                  <div class="border-b-4 border-yellow-400 ... mb-6"></div>
+                  <div class="border-b-4 border-purple-400 ... mb-6"></div>
                </div>
            </section>
            <section>
             <ul class="flex flex-col gap-4">
-                <p class="text-4xl font-bold text-yellow-300 capitalize mb-4">
+                <p  class="md:text-2xl text-xl md:font-bold font-medium text-purple-300 capitalize mb-4">
                   Benefits of working with us:
                 </p>
                 <div class="flex gap-3">
                   <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-                  <li class="text-2xl font-thin ">Ensure a steady income for landlords with guaranteed rent!</li>
+                  <li class="md:text-2xl text-sm  font-thin ">Ensure a steady income for landlords with guaranteed rent!</li>
                 </div>
                 <div class="flex gap-3">
                   <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-                  <li class="text-2xl font-thin">Safeguard your cash flow effortlessly for 3-5 years, with a completely hands-off approach and zero vacant periods.</li>
+                  <li class="md:text-2xl text-sm  font-thin " >Safeguard your cash flow effortlessly for 3-5 years, with a completely hands-off approach and zero vacant periods.</li>
                 </div>
                 <div class="flex gap-3">
                   <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-                  <li class="text-2xl font-thin ">
+                  <li class="md:text-2xl text-sm  font-thin ">
                     Get your property rented within 72 hours!
                   </li>
                 </div>
@@ -74,11 +144,11 @@
            <!-- lenthy text section -->
             <section class="flex flex-col gap-6 mt-10">
                   <div>
-                    <p class="text-yellow-400 font-bold text-2xl capitalize leading-relaxed">
+                    <p class="text-purple-400 font-medium mb-4  md:font-bold text-lg md:text-2xl capitalize leading-relaxed">
                         Option 1: Local Authority Guaranteed Rent Providers
                          - Stock type: Studio - 4 bed flat & house
                        </p>
-                       <p class="leading-relaxed text-lg font-light w-3/4  ">
+                       <p class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">
                           Our customers overwhelmingly favor this option,
                           as it offers a guaranteed rental income for your property with completions possible in as little as 72 hours. 
                           For 90% of properties within London, we can meet your asking price and expedite the moving-in process swiftly.
@@ -89,14 +159,14 @@
                            It's important to note that this option does not require deposits. 
                            This model has successfully rented over 100 units in the last 6 months! Kindly fill out the form below to lease your property.
                         </p>
-                        <p class="text-lg font-semibold capitalize ">please fill the form below to let your property</p>
+                        <p class="md:text-lg text-sm font-semibold capitalize ">please fill the form below to let your property</p>
                   </div>
                   <div>
-                    <p class="text-yellow-400 font-bold text-2xl capitalize leading-relaxed">
+                    <p class="text-purple-400 font-medium mb-4  md:font-bold text-lg md:text-2xl capitalize leading-relaxed">
                         Option 2: Supported Living Companies
                            - Stock type: 3 bed + house
                        </p>
-                       <p class="leading-relaxed text-lg font-light w-3/4  ">
+                       <p class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-6 break-before-auto">
                           We Source housing for Supported Living Companies. These companies would rent your property from you on a GUARANTEE RENT for a long-term tenancy,
                           dealing with the tenants, maintenance and bills for the property throughout the duration.
                           They work along with the council & government to house vulnerable tenant groups and provide secure housing for them.
@@ -105,14 +175,14 @@
                              They only look for large houses usually 4 bedrooms upwards and are registered and verified by the CQC which is the professional body for supported living. 
                            These companies are funded by the government, which is why they can provide GUARANTEED RENT and, on most cases, can match your asking price.
                         </p>
-                        <p  class="text-lg font-semibold capitalize ">please fill the form below to let your property</p>
+                        <p  class="md:text-lg text-sm font-semibold capitalize ">please fill the form below to let your property</p>
                   </div>
                   <div>
-                    <p class="text-yellow-400 font-bold text-2xl capitalize leading-relaxed ">
+                    <p class="text-purple-400 font-medium mb-4  md:font-bold text-lg md:text-2xl capitalize leading-relaxed">
                         Option 3: Service Accommodation providers
                         - Stock type: Studio - 4 bed flat & House
                        </p>
-                       <p  class="leading-relaxed text-lg font-light w-3/4  ">
+                       <p  class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-6 break-before-auto">
                          We provide housing option for service accomadation providers. They essentially deal with short let contracts for local contractors.
                          The benefit of this model is they provide a good uplift to the property in terms of decoration as their model deals with high quality apartments. 
                          The company would rent your property for 3-5 years also providing a guaranteed rent,
@@ -120,66 +190,66 @@
                            This option can provide a deposit insurance scheme as they tend to furnish the property with high value items.
                          Similarly they provide guaranteed rent, full maintenance and no void periods whether or not they have tenants in the property.
                         </p>
-                        <p class="text-lg font-semibold capitalize ">please fill the form below to let your property</p>
+                        <p class="md:text-lg text-sm font-semibold capitalize ">please fill the form below to let your property</p>
                   </div>
                   <div>
-                    <p class="text-yellow-400 font-bold text-2xl capitalize leading-relaxed">
+                    <p class="text-purple-400 font-medium mb-4  md:font-bold text-lg md:text-2xl capitalize leading-relaxed">
                         1. Why does option 1 not pay deposits..?
                        </p>
-                       <p  class="leading-relaxed text-lg font-light w-3/4  ">
+                       <p  class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-6 break-before-auto">
                           Option 1 Business model works in conjunction with the home office & local council, their income to us is provided 2 months in arrears, which mean each property they take on, they have to fund the first 2 months from their capital. 
 
                           They provide a soft maintenance lease which means in the contract it stipulates that they are full responsibility for any internal repairs & maintenance throughout the duration of the contract and must hand the property back in the same condition it was let to them (based on the inventory check before move in) 
 
                            They have multiple properties on management and multiple units they acquire on a monthly bases due to Cashflow they don’t provide deposit as our capital needs to be used across multiple units to offer rent in advance
                         </p>
-                        <p class="text-lg font-semibold capitalize ">please fill the form below to let your property</p>
+                        <p class="md:text-lg text-sm font-semibold capitalize ">please fill the form below to let your property</p>
                   </div>
                   <!-- order list  -->
                   <div>
                     <ul class="flex flex-col gap-4 ">
-                        <p class="text-2xl font-bold text-yellow-300 capitalize mb-4 "> 2. What is the process to complete a let..?</p>
+                        <p class="text-purple-400 font-medium mb-4  md:font-bold text-lg md:text-2xl capitalize leading-relaxed">  2. What is the process to complete a let..?</p>
                          <div class="flex gap-3 ">
                              <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
-                             <li>We need full address & property details</li>
+                             <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">We need full address & property details</li>
                          </div>
                         <div class="flex gap-3 ">
                          <img class="w-4 h-4 mt-1 "  src="./icons/rec.png" alt="">
-                         <li>We offer a rental quote.</li>
+                         <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">We offer a rental quote.</li>
                         </div>
                         <div class="flex gap-3 ">
                          <img class="w-4 h-4 mt-1 "  src="./icons/rec.png" alt="">
-                         <li>(If satisfied) we request a detailed video tour.</li>
+                         <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">(If satisfied) we request a detailed video tour.</li>
                         </div>
                         <div class="flex gap-3 ">
                          <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
-                         <li>(If satisfied) we arrange a realistic start date.</li>
+                         <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">(If satisfied) we arrange a realistic start date.</li>
                         </div>
                         <div class="flex gap-3 ">
                             <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
-                            <li>(Once agreed) we need all certifications: GAS, EICR, EPC.</li>
+                            <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">(Once agreed) we need all certifications: GAS, EICR, EPC.</li>
                         </div>
                         <div class="flex gap-3 ">
                             <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
-                            <li>A draft contract is sent for review.</li>
+                            <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">A draft contract is sent for review.</li>
                         </div>
                         <div class="flex gap-3 ">
                             <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
-                            <li>The final contract is sent for signing.</li>
+                            <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">The final contract is sent for signing.</li>
                         </div>
                         <div class="flex gap-3 ">
                             <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
-                            <li>(Once signed) payment for move-in is required.</li>
+                            <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">(Once signed) payment for move-in is required.</li>
                         </div>
                         <div class="flex gap-3 ">
                             <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
-                            <li>Key collection follows..</li>
+                            <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">Key collection follows..</li>
                         </div>
                      </ul>
                   </div>
                   <div>
-                    <p class="text-yellow-400 font-bold text-2xl capitalize leading-relaxed ">3. Will my property be looked after..?</p>
-                    <p class="leading-relaxed text-lg font-light w-3/4  ">
+                    <p class="text-purple-400 font-medium mb-4  md:font-bold text-lg md:text-2xl capitalize leading-relaxed">3. Will my property be looked after..?</p>
+                    <p class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-6 break-before-auto">
                          Yes! All our company tenants have been vetted by us, furthermore all contracts stipulate they
                           are in charge of full maintenance for the duration 
                           of the term and the property to be returned in the same standard it was let in (based on inventory).
@@ -187,10 +257,10 @@
                   </div>
                   <div>
                     <ul class="flex flex-col gap-4 ">
-                        <p class="text-2xl font-bold text-yellow-300 capitalize mb-4 "> 2. What is the process to complete a let..?</p>
+                        <p class="text-purple-400 font-medium mb-4  md:font-bold text-lg md:text-2xl capitalize leading-relaxed"> 2. What is the process to complete a let..?</p>
                          <div class="flex gap-3 ">
                              <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
-                             <li class="leading-relaxed text-lg font-light w-3/4  "> <span class="font-semibold"> (For Local Authority Options) We do not require deposits</span>, given our frequent property acquisitions that necessitate continual capital for rental payments.
+                             <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-6 break-before-auto"> <span class="font-semibold"> (For Local Authority Options) We do not require deposits</span>, given our frequent property acquisitions that necessitate continual capital for rental payments.
 
                                 We offer a soft maintenance lease, obligating us within the contract to handle all day-to-day property maintenance (excluding ROOF, BOILER & STRUCTURAL), tenant interactions, and to return the property in its original state, minus any natural wear and tear.
                                 
@@ -199,18 +269,18 @@
                          </div>
                         <div class="flex gap-3 ">
                          <img class="w-4 h-4 mt-1 "  src="./icons/rec.png" alt="">
-                         <li class="font-semibold text-lg">Each property is intended to accommodate a family, short-term local contractors, or our alternative option of residential healthcare.</li>
+                         <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-6 break-before-auto">Each property is intended to accommodate a family, short-term local contractors, or our alternative option of residential healthcare.</li>
                         </div>
                         <div class="flex gap-3 ">
                          <img class="w-4 h-4 mt-1 "  src="./icons/rec.png" alt="">
-                         <li class="font-semibold text-lg">Areas of interest include: LONDON, KENT, PARTS OF SURREY.</li>
+                         <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-6 break-before-auto">Areas of interest include: LONDON, KENT, PARTS OF SURREY.</li>
                         </div>
                      </ul>
                   </div>
                   <!-- form -->
                   <section class="flex gap-6  w-full h-full mt-10  ">
-                    <div class="w-3/4 h-full ">
-                        <p class="text-center text-yellow-400 text-4xl  font-semibold capitalize mb-10 ">rent your property </p>
+                    <div class="md:w-3/4 w-full h-full ">
+                        <p class="text-center text-purple-400 text-4xl  font-semibold capitalize mb-10 ">rent your property </p>
                       <form class="w-full h-full">
                         <div class="relative z-0 w-full mb-5 group">
                           <input
@@ -330,95 +400,101 @@
                         </button>
                       </form>
                     </div>
-                    <div class="w-1/3 border-solid border-2 shadow-sm  ">
+                    <div class="w-1/3 border-solid border-2 shadow-sm  md:block hidden">
                         <img class="w-full h-full "  src="./images/wallpaper/living-room-8368382_1280.jpg" alt="" srcset="">
                     </div>
                   </section>
             </section>
-            <div class="border-b-4 border-yellow-500 ... mt-12"></div>
+            <div class="border-b-4 border-purple-500 ... mt-12"></div>
             <!-- last section -->
             <section class="flex flex-col gap-10  mt-6 ">
-                <div class="flex justify-evenly ">
-                    <div class="flex flex-col gap-4 items-center justify-center w-1/3  h-full ">
+                <div class="flex md:flex-row md:justify-evenly flex-col gap-10  ">
+                    <div class="flex flex-col gap-4 items-center justify-center md:w-1/3 w-full  h-full ">
                        <div class="flex justify-center w-full"><img class="w-1/5" src="./icons/notes.png" alt=""></div>
                        <p class="text-sm font-semibold capitalize ">step 1</p>
-                       <p class="text-xs capitalize font-thin">input properties details</p>
+                       <p class="text-xs capitalize font-thin md:text-left text-center">input properties details</p>
                     </div>
-                    <div class="flex flex-col gap-4 items-center justify-center w-1/3  h-full  ">
+                    <div class="flex flex-col gap-4 items-center justify-center md:w-1/3 w-full h-full  ">
                       <div class="flex justify-center w-full"><img class="w-1/5" src="./icons/quality-control.png" alt=""></div>
                       <p class="text-sm font-semibold capitalize ">step 2</p>
-                      <p class="text-xs capitalize font-thin">One of the team will contact you to arrange a viewing</p>
+                      <p class="text-xs capitalize font-thin md:text-left text-center">One of the team will contact you to arrange a viewing</p>
                    </div>
-                   <div class="flex flex-col gap-4 items-center justify-center w-1/3  h-full  ">
+                   <div class="flex flex-col gap-4 items-center justify-center md:w-1/3 w-full  h-full  ">
                       <div class="flex justify-center w-full"><img class="w-1/5" src="./icons/detected.png" alt=""></div>
                       <p class="text-sm font-semibold capitalize ">step 3</p>
-                      <p class="text-xs capitalize font-thin">We will gather offers from our clients with potential further viewings</p>
+                      <p class="text-xs capitalize font-thin md:text-left text-center">We will gather offers from our clients with potential further viewings</p>
                    </div>
               </div>
-              <div class="flex justify-evenly ">
-                  <div class="flex flex-col gap-4 items-center justify-center w-1/3  h-full  ">
+              <div class="flex md:flex-row md:justify-evenly flex-col gap-10 ">
+                  <div class="flex flex-col gap-4 items-center justify-center md:w-1/3 w-full  h-full  ">
                       <div class="flex justify-center w-full"><img class="w-1/5" src="./icons/pencil.png" alt=""></div>
                       <p class="text-sm font-semibold capitalize ">step 4</p>
-                      <p class="text-xs capitalize font-thin">We will choose the right company for your property</p>
+                      <p class="text-xs capitalize font-thin md:text-left text-center">We will choose the right company for your property</p>
                    </div>
-                   <div class="flex flex-col gap-4 items-center justify-center w-1/3  h-full  ">
+                   <div class="flex flex-col gap-4 items-center justify-center md:w-1/3 w-full  h-full  ">
                       <div class="flex justify-center w-full"><img class="w-1/5" src="./icons/contract.png" alt=""></div>
                       <p class="text-sm font-semibold capitalize ">step 5</p>
-                      <p class="text-xs capitalize font-thin">Referencing and contracts</p>
+                      <p class="text-xs capitalize font-thin md:text-left text-center">Referencing and contracts</p>
                    </div>
-                   <div class="flex flex-col gap-4 items-center justify-center w-1/3  h-full ">
+                   <div class="flex flex-col gap-4 items-center justify-center md:w-1/3 w-full  h-full ">
                       <div class="flex justify-center w-full"><img class="w-1/5" src="./icons/deal.png" alt=""></div>
                       <p class="text-sm font-semibold capitalize ">step 6</p>
-                      <p class="text-xs capitalize font-thin">Congratulations your property has now been let</p>
+                      <p class="text-xs capitalize font-thin md:text-left text-center">Congratulations your property has now been let</p>
                    </div>
               </div>
             </section>
       </main>
 
-       <div class="border-b-4 border-yellow-500 ... mt-12"></div>
+      <div class="border-b-4 border-purple-500 ... mt-12"></div>
       <footer class="bg-black text-white">
         <section class="ml-6 mr-6 mb-16">
-         
-          <div class="flex justify-evenly py-6 ">
-            <div class="flex flex-col gap-4  ">
-                <div class="border-solid border-2 w-28 h-full bg-transparent "><img class=" w-full h-full bg-transparent " src="./images/logo_arch.png" alt="image" srcset="" /></div>
+          <div class="flex md:flex-row md:justify-evenly flex-col gap-4  py-6">
+            <div class="flex flex-col gap-4">
+              <!-- <div class="border-solid border-2 w-28 h-full bg-transparent">
+                 <img
+                  class="w-full h-full bg-transparent md:block hidden"
+                  src="./images/logo_arch.png"
+                  alt="image"
+                  srcset=""
+                
+              </div> -->
               <input
-                class="w-24 h-12 bg-yellow-400 border-solid border-2 rounded-sm shadow-sm capitalize font-semibold text-lg text-white"
+                class="md:block hidden w-24 h-12 bg-purple-400 border-solid border-2 rounded-sm shadow-sm capitalize font-semibold text-lg text-white"
                 type="button"
                 value="login"
               />
             </div>
             <div class="flex flex-col gap-4">
-              <p class="font-bold text-2xl capitalize">quick links</p>
-              <a href="#">Compliances</a>
-              <a href="#">Testimonials</a>
-              <a href="#">Contact us</a>
+              <p class="text-lg font-medium  md:font-bold md:text-2xl capitalize">quick links</p>
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Compliances</a>
+              <a href="#"  class="text-xs md:text-lg font-light md:font-semibold ">Testimonials</a>
+              <a href="#"  class="text-xs md:text-lg font-light md:font-semibold ">Contact us</a>
             </div>
             <div class="flex flex-col gap-4">
-              <p class="font-bold text-2xl capitalize">popular search</p>
-              <a href="#">Rent your property</a>
-              <a href="#">Our prices</a>
-              <a href="#">About the company</a>
+              <p  class="text-lg font-medium  md:font-bold md:text-2xl capitalize">popular search</p>
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Rent your property</a>
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Our prices</a>
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">About the company</a>
             </div>
             <div class="flex flex-col gap-4">
-              <p class="font-bold text-2xl capitalize">opening times</p>
-              <a href="#">Mon - Fri 10am - 6pm</a>
-              <a href="#">Sat 10am - 3pm</a>
-              <a href="#">Sun - Closed</a>
-              <a href="#">Bank Holidays - Closed</a>
+              <p class="text-lg font-medium  md:font-bold md:text-2xl capitalize">opening times</p>
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Mon - Fri 10am - 6pm</a>
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Sat 10am - 3pm</a>
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Sun - Closed</a>
+              <a href="# " class="text-xs md:text-lg font-light md:font-semibold ">Bank Holidays - Closed</a>
             </div>
             <div class="flex flex-col gap-4">
-              <p class="font-bold text-2xl capitalize">contact us</p>
-              <a href="mailto:info@smartchoicepropertyltd.com">
+              <p class="text-lg font-medium  md:font-bold md:text-2xl capitalize">contact us</p>
+              <a href="mailto:info@smartchoicepropertyltd.com"  class="text-xs md:text-lg font-light md:font-semibold text-purple-400 hover:text-purple-500 active:text-purple-600">
                 info@smartchoicepropertyltd.com</a
-              >
-              <a href="#">0207 101 3679</a>
-              <a href="#">20-22 Wenlock road, N1 7GU</a>
+              > 
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">0207 101 3679</a>
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">20-22 Wenlock road, N1 7GU</a>
             </div>
           </div>
         </section>
   
-        <div class="border-b-4 border-yellow-500 ... mb-6"></div>
+        <div class="border-b-4 border-purple-500 ... mb-6"></div>
         <section class="ml-6 mr-6 flex flex-col gap-4">
           <p class="text-sm font-light leading-6 italic">
             ©2020 Smart Choice Property Investments LTD All rights reserved. Smart

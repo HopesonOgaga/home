@@ -1,3 +1,37 @@
+//
+const close_menu = document.querySelector('.close-menu')
+const open_menu = document.querySelector('.open-menu')
+const menu_options = document.querySelector('.menu-options')
+
+menu_options.classList.add('hidden')
+
+open_menu.addEventListener('click', function(){
+    console.log('yo')
+    open_menu.classList.add('hidden')
+    close_menu.classList.remove('hidden')
+    menu_options.classList.remove('hidden')
+})
+
+
+close_menu.addEventListener('click', function(){
+  console.log('yo')
+  close_menu.classList.add('hidden')
+  open_menu.classList.remove('hidden')
+  menu_options.classList.add('hidden')
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 // mapn
 let map = document.getElementById("map");
 if (navigator.geolocation) {

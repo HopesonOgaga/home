@@ -13,39 +13,108 @@
     <title>Document</title>
 </head>
 <body class="font-playfair">
-    <header class=" mb-10 wall h-screen pl-6 pr-6">
-        <style>
-            .wall{
-                background-image: url(./images/wallpaper/bedroom-3778695_1280.jpg);
-                background-repeat: no-repeat;
-                background-size: 100% 100%;
-            }
-        </style>
-        <section class="flex justify-between  w-full py-12 ">
-            
-            <div class="border-solid border-2 w-28 h-full bg-transparent ">
-                <img class=" bg-transparent " src="./images/logo_arch.png" alt="image" srcset="" />
-              </div>
-          <div class="flex gap-4 text-white ">
-            <a href="index.html" target="_self" class="capitalize font-semibold  text-xl">home</a>
-            <a href="about.html" target="_self" class="capitalize font-semibold  text-xl ">about us</a>
-            <a href="company_tenants.html" target="_self" class="capitalize font-semibold  text-xl ">company tenants</a>
-            <a href="landlord.html" target="_self" class="capitalize font-semibold  text-xl ">for landlords</a>
-            <a href="#" class="capitalize font-semibold text-xl ">Documentation</a>
-            <a href="#" class="capitalize font-semibold  text-xl ">more +</a>
-          </div>
-          <div class="flex gap-6 ">
-            <input class="w-24 h-12 bg-yellow-400 border-solid border-2 rounded-sm shadow-sm capitalize font-semibold text-lg text-white  " type="button" value="register" />
-            <input class="w-24  h-12 bg-purple-400 border-solid border-2 rounded-sm shadow-sm  capitalize font-semibold text-lg text-white  " type="button" value="login" />
-          </div>
-        </section>
-        <section class="flex flex-col gap-20 justify-center items-center">
-            <a href="#" class="capitalize text-4xl text-center font-semibold text-white">contact us</a>
-        </section>
-      </header>
+  <header class="mb-10 h-64  wall md:h-screen pl-6 pr-6">
+    <style>
+      .wall {
+        background-image: url(./images/wallpaper/castle-458058_1280.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+    </style>
+    <section class="flex justify-between w-full md:py-12">
+      <div class="border-solid border-2 w-1/6  md:w-28 h-full bg-transparent  md:block">
+        <img
+          class="bg-transparent"
+          src="./images/logo_arch.png"
+          alt="image"
+          srcset=""
+        />
+      </div>
+      <div class="flex gap-10  text-white md:block hidden capitalize ">
+        <a
+          href="index.html"
+          target="_self"
+          class="capitalize font-semibold text-xl"
+          >home</a
+        >
+        <a
+          href="about.html"
+          target="_self"
+          class="capitalize font-semibold text-xl"
+          >about us</a
+        >
+        <a
+          href="company_tenants.html"
+          target="_self"
+          class="capitalize font-semibold text-xl"
+          >company tenants</a
+        >
+        <a
+          href="landlord.html"
+          target="_self"
+          class="capitalize font-semibold text-xl"
+          >for landlords</a
+        >
+        <a href="#" class="capitalize font-semibold text-xl">Documentation</a>
+        <a href="#" class="capitalize font-semibold text-xl">more +</a>
+      </div>
+      <div class="flex gap-6 md:block hidden ">
+        <input
+          class="w-24 h-12 bg-purple-400 border-solid border-2 rounded-sm shadow-sm capitalize font-semibold text-lg text-white"
+          type="button"
+          value="register"
+        />
+        <input
+          class="w-24 h-12 bg-purple-400 border-solid border-2 rounded-sm shadow-sm capitalize font-semibold text-lg text-white"
+          type="button"
+          value="login"
+        />
+      </div>
+      <!-- mobile view -->
+      <div class="md:hidden transition-all ease-in duration-500 absolute right-0">
+        <img src="./icons/menu-bar.png" class="w-10 open-menu " alt="">
+        <img src="./icons/menu-close.png" class="w-10 close-menu hidden " alt="">
+      </div>
+      <div class="  menu-options flex flex-col z-50 border-2 ml-0 mr-0  transition-all ease-in duration-500  border-solid rounded-sm shadow-sm py-10 mt-14  items-center w-screen h-full bg-purple-700  gap-10  text-white md:hidden opacity-90  capitalize ">
+        <a
+          href="index.html"
+          target="_self"
+          class="capitalize font-semibold text-xl"
+          >home</a
+        >
+        <a
+          href="about.html"
+          target="_self"
+          class="capitalize font-semibold text-xl"
+          >about us</a
+        >
+        <a
+          href="company_tenants.html"
+          target="_self"
+          class="capitalize font-semibold text-xl"
+          >company tenants</a
+        >
+        <a
+          href="landlord.html"
+          target="_self"
+          class="capitalize font-semibold text-xl"
+          >for landlords</a
+        >
+        <a href="#" class="capitalize font-semibold text-xl">Documentation</a>
+        <a href="#" class="capitalize font-semibold text-xl">more +</a>
+      </div>
+    </section>
+    <section class="flex flex-col mt-10  md:gap-20 justify-center items-center">
+      <a
+        href="#"
+        class="uppercase md:text-4xl text-xl  text-center font-medium md:font-semibold text-white"
+        >company tenants</a
+      >
+    </section>
+  </header>
       <main>
         <section class="flex w-full h-full md:flex-row flex-col gap-6  md:justify-evenly mt-10  mb-24 ">
-          <div class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 cursor-pointer border-solid border-2 shadow-md rounded-sm w-full md:w-1/4 h-64 flex flex-col justify-center items-center gap-6 border-yellow-400 ">
+          <div class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 cursor-pointer border-solid border-2 shadow-md rounded-sm w-full md:w-1/4 h-64 flex flex-col justify-center items-center gap-6 border-purple-400 ">
               <div><img class="w-8 h-8 " src="./icons/location.png" alt="image" srcset=""></div>
               <div>
                   <p class="text-lg font-bold capitalize ">Our Address</p>
@@ -54,7 +123,7 @@
                   <p class="text-sm font-thin ">128 city London ec1v 2nx</p>
               </div>
           </div>
-          <div class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 border-solid cursor-pointer border-2 shadow-md rounded-sm w-full md:w-1/4 h-64 flex flex-col justify-center items-center gap-6 border-yellow-400 ">
+          <div class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 border-solid cursor-pointer border-2 shadow-md rounded-sm w-full md:w-1/4 h-64 flex flex-col justify-center items-center gap-6 border-purple-400 ">
               <div><img class="w-8 h-8 " src="./icons/email.png" alt="image" srcset=""></div>
               <div>
                   <p class="text-lg font-bold capitalize ">Our email</p>
@@ -63,7 +132,7 @@
                   <p class="text-sm font-thin ">info@11thhourproperties.com</p>
               </div>
           </div>
-          <div class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 border-solid cursor-pointer border-2 shadow-md rounded-sm w-full md:w-1/4 h-64 flex flex-col justify-center items-center gap-6 border-yellow-400">
+          <div class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 border-solid cursor-pointer border-2 shadow-md rounded-sm w-full md:w-1/4 h-64 flex flex-col justify-center items-center gap-6 border-purple-400">
               <div><img class="w-8 h-8 " src="./icons/phone-call.png" alt="image" srcset=""></div>
               <div>
                   <p class="text-lg font-bold capitalize ">Our phone</p>
@@ -104,60 +173,76 @@
         </section>
        </section>
       </main>
-    <div class="border-b-4 border-yellow-500 ... mt-12"></div>
-    <footer class="bg-black  text-white ">
-        <section class="ml-6 mr-6 mb-16 ">
-          <div class="flex justify-evenly py-6 ">
-            <div class="flex flex-col gap-4  ">
-              <div class="border-solid border-2 w-28 h-full bg-transparent "><img class=" w-full h-full bg-transparent " src="./images/logo_arch.png" alt="image" srcset="" /></div>
-            <input
-              class="w-24 h-12 bg-purple-400  border-solid border-2 rounded-sm shadow-sm capitalize font-semibold text-lg text-white"
-              type="button"
-              value="login"
-            />
-          </div>
-            <div class="flex flex-col gap-4  ">
-              <p class="font-bold text-2xl capitalize ">quick links</p>
-              <a href="#">Compliances</a>
-              <a href="#">Testimonials</a>
-              <a href="#">Contact us</a>
-            </div>
-            <div class="flex flex-col gap-4  ">
-              <p class="font-bold text-2xl capitalize" >popular search</p>
-              <a href="#">Rent your property</a>
-              <a href="#">Our prices</a>
-              <a href="#">About the company</a>
-            </div>
-            <div class="flex flex-col gap-4  ">
-              <p class="font-bold text-2xl capitalize">opening times</p>
-              <a href="#">Mon - Fri 10am - 6pm</a>
-              <a href="#">Sat 10am - 3pm</a>
-              <a href="#">Sun - Closed</a>
-              <a href="#">Bank Holidays - Closed</a>
-            </div>
-            <div class="flex flex-col gap-4  ">
-                <p class="font-bold text-2xl capitalize">contact us</p>
-                <a href="mailto:info@smartchoicepropertyltd.com"> info@smartchoicepropertyltd.com</a>
-                 <a href="#">0207 101 3679</a>
-                <a href="#">20-22 Wenlock road, N1 7GU</a>  
+      <div class="border-b-4 border-purple-500 ... mt-12"></div>
+      <footer class="bg-black text-white">
+        <section class="ml-6 mr-6 mb-16">
+          <div class="flex md:flex-row md:justify-evenly flex-col gap-4  py-6">
+            <div class="flex flex-col gap-4">
+              <!-- <div class="border-solid border-2 w-28 h-full bg-transparent">
+                 <img
+                  class="w-full h-full bg-transparent md:block hidden"
+                  src="./images/logo_arch.png"
+                  alt="image"
+                  srcset=""
                 
-             </div>
+              </div> -->
+              <input
+                class="md:block hidden w-24 h-12 bg-purple-400 border-solid border-2 rounded-sm shadow-sm capitalize font-semibold text-lg text-white"
+                type="button"
+                value="login"
+              />
+            </div>
+            <div class="flex flex-col gap-4">
+              <p class="text-lg font-medium  md:font-bold md:text-2xl capitalize">quick links</p>
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Compliances</a>
+              <a href="#"  class="text-xs md:text-lg font-light md:font-semibold ">Testimonials</a>
+              <a href="#"  class="text-xs md:text-lg font-light md:font-semibold ">Contact us</a>
+            </div>
+            <div class="flex flex-col gap-4">
+              <p  class="text-lg font-medium  md:font-bold md:text-2xl capitalize">popular search</p>
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Rent your property</a>
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Our prices</a>
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">About the company</a>
+            </div>
+            <div class="flex flex-col gap-4">
+              <p class="text-lg font-medium  md:font-bold md:text-2xl capitalize">opening times</p>
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Mon - Fri 10am - 6pm</a>
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Sat 10am - 3pm</a>
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Sun - Closed</a>
+              <a href="# " class="text-xs md:text-lg font-light md:font-semibold ">Bank Holidays - Closed</a>
+            </div>
+            <div class="flex flex-col gap-4">
+              <p class="text-lg font-medium  md:font-bold md:text-2xl capitalize">contact us</p>
+              <a href="mailto:info@smartchoicepropertyltd.com"  class="text-xs md:text-lg font-light md:font-semibold text-purple-400 hover:text-purple-500 active:text-purple-600">
+                info@smartchoicepropertyltd.com</a
+              > 
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">0207 101 3679</a>
+              <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">20-22 Wenlock road, N1 7GU</a>
+            </div>
           </div>
         </section>
-         
-        <div class="border-b-4 border-yellow-500 ... mb-6 "></div>
-        <section class="ml-6 mr-6 flex flex-col gap-4 ">
-          <p class="text-sm font-light leading-6 italic ">©2020 Smart Choice Property Investments LTD All rights reserved.
-            Smart Choice Property Investments LTD is a sourcer for Rent to HMO properties within the UK for Investors,
-             Care providers & Social housing providers, which is authorised and regulated by the Property Redress
-              Scheme for insurance mediation. Registered in England number 12565248. Registered office address: 193 Garth Road, Unit 14, London, SM4 4LZ 
-           </p>
-           <p class="text-sm font-light leading-6 italic ">
-            Disclaimer: We are a sourcing company, we are not responsible for the property after the tenancy start date.
-            If you have taken the property after doing your own due diligence and you are confident it meets your requirements then we are not reliable if the property does not meet your needs. Our sole purpose is to provide available properties
-            but it is ultimately your responsibility to do your own research before committing to a property.
-           </p>
+  
+        <div class="border-b-4 border-purple-500 ... mb-6"></div>
+        <section class="ml-6 mr-6 flex flex-col gap-4">
+          <p class="text-sm font-light leading-6 italic">
+            ©2020 Smart Choice Property Investments LTD All rights reserved. Smart
+            Choice Property Investments LTD is a sourcer for Rent to HMO
+            properties within the UK for Investors, Care providers & Social
+            housing providers, which is authorised and regulated by the Property
+            Redress Scheme for insurance mediation. Registered in England number
+            12565248. Registered office address: 193 Garth Road, Unit 14, London,
+            SM4 4LZ
+          </p>
+          <p class="text-sm font-light leading-6 italic">
+            Disclaimer: We are a sourcing company, we are not responsible for the
+            property after the tenancy start date. If you have taken the property
+            after doing your own due diligence and you are confident it meets your
+            requirements then we are not reliable if the property does not meet
+            your needs. Our sole purpose is to provide available properties but it
+            is ultimately your responsibility to do your own research before
+            committing to a property.
+          </p>
         </section>
-    </footer>
+      </footer>
 </body>
 </html>
