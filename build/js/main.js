@@ -20,10 +20,7 @@ close_menu.addEventListener('click', function(){
   menu_options.classList.add('hidden')
 })
 
-
-
-
-
+// email section
 
 
 
