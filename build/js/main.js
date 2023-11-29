@@ -1,4 +1,12 @@
 // email
+ const floating_email = document.getElementById('floating_email')
+ const floating_company_name = document.getElementById('floating-company-name')
+ const  floating_Company_registration_number = document.getElementById('floating_Company-registration-number')
+ const  floating_first_name = document.getElementById('floating-first-name')
+ const  floating_last_name = document.getElementById('floating-last-name')
+ const floating_phone = document.getElementById('floating-phone')
+ const default_checkbox = document.getElementById('default-checkbox')
+
 
 
 // mapn
