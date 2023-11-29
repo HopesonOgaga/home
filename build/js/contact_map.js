@@ -16,7 +16,7 @@ if (navigator.geolocation) {
         .openPopup();
     },
     function () {
-      alert("please turn on location");
+      return null
     }
   );
 }
