@@ -1513,6 +1513,10 @@ input:checked + .toggle-bg {
   width: 2.25rem;
 }
 
+.w-32 {
+  width: 8rem;
+}
+
 .max-w-screen-xl {
   max-width: 1280px;
 }
@@ -2848,6 +2852,10 @@ input:checked + .toggle-bg {
     height: 100vh;
   }
 
+  .md\:h-14 {
+    height: 3.5rem;
+  }
+
   .md\:w-1\/12 {
     width: 8.333333%;
   }
@@ -2878,6 +2886,10 @@ input:checked + .toggle-bg {
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-1\/6 {
+    width: 16.666667%;
   }
 
   .md\:grid-cols-2 {
