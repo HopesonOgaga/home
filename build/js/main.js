@@ -1,13 +1,42 @@
-// email
- const floating_email = document.getElementById('floating_email')
- const floating_company_name = document.getElementById('floating-company-name')
- const  floating_Company_registration_number = document.getElementById('floating_Company-registration-number')
- const  floating_first_name = document.getElementById('floating-first-name')
- const  floating_last_name = document.getElementById('floating-last-name')
- const floating_phone = document.getElementById('floating-phone')
- const default_checkbox = document.getElementById('default-checkbox')
+const form_submit = document.querySelector(".form-tenant");
 
+function sendMail() {
+  let params = {
+    email_address: document.getElementById("email-address").value,
+    company_name: document.getElementById("company-name").value,
+    company_reg_num: document.getElementById("company-reg-num").value,
+    first_name: document.getElementById("first-name").value,
+    last_name: document.getElementById("last-name").value,
+    tenant_pre_location: document.getElementById("tenant-looking").value,
+    phone_number: document.getElementById("phone-number").value,
+    default_checkbox: document.getElementById("default-checkbox").checked
+      ? "Checked"
+      : "Unchecked", // Use checked property for checkboxes
+    budget_text: document.getElementById("max-budget").value,
+    building_type: document.getElementById("preferred-building").value,
+  };
 
+  const templateID = "template_trl6a35";
+  const serviceID = "service_6rwda4a";
+
+  emailjs
+    .send(serviceID, templateID, params)
+    .then((res) => {
+      // Reset form fields on successful submission
+      form_submit.reset();
+      console.log(res);
+      alert("Email sent successfully");
+    })
+    .catch((err) => {
+      console.error(err);
+      alert("Error sending email");
+    });
+}
+
+form_submit.addEventListener("submit", function (e) {
+  e.preventDefault();
+  sendMail();
+});
 
 // mapn
 let map = document.getElementById("map");

@@ -10,6 +10,13 @@
     <script src="../path/to/flowbite/dist/flowbite.min.js" defer></script>
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js" defer></script>
     <script src="./js/app-bundle.js" defer></script>
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script type="text/javascript" defer>
+          (function(){
+                emailjs.init("SGuFAOwx5VAUXx2LS");
+           })();
+     </script>
+    <script src="./js/main.js" defer ></script>
     <link rel="stylesheet" href="./css/output.css" />
     <title>Document</title>
   </head>
@@ -197,7 +204,7 @@
         </div>
       </section>
     </header>
-    <section class="mr-20 ml-20 ">
+    <section class="md:mr-20 md:ml-20 mr-8 ml-8">
       <div>
         <p class=" md:text-4xl text-lg font-medium  md:font-semibold uppercase text-purple-400">
          company tenants
@@ -348,18 +355,18 @@
           >
             What are you Looking for
           </p>
-          <form class="w-full h-full">
+          <form class="w-full h-full form-tenant">
             <div class="relative z-0 w-full mb-5 group">
               <input
                 type="email"
-                name="floating-email"
-                id="floating-email"
+                name="email-address"
+                id="email-address"
                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-purple-500 focus:outline-none focus:ring-0 focus:border-purple-600 peer"
                 placeholder=" "
                 required
               />
               <label
-                for="floating-email"
+                for="email-address"
                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-purple-600 peer-focus:dark:text-purple-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >Email address</label
               >
@@ -367,14 +374,14 @@
             <div class="relative z-0 w-full mb-5 group">
               <input
                 type="text"
-                name="floating-company-name"
-                id="floating-company-name"
+                name="company-name"
+                id="company-name"
                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-purple-500 focus:outline-none focus:ring-0 focus:border-purple-600 peer"
                 placeholder=" "
                 required
               />
               <label
-                for="floating-password"
+                for="company-name"
                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-purple-600 peer-focus:dark:text-purple-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >company name</label
               >
@@ -382,14 +389,14 @@
             <div class="relative z-0 w-full mb-5 group">
               <input
                 type="text"
-                name="floating-Company-registration-number"
-                id="floating_Company-registration-number"
+                name="company-reg-num"
+                id="company-reg-num"
                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-purple-500 focus:outline-none focus:ring-0 focus:border-purple-600 peer"
                 placeholder=" "
                 required
               />
               <label
-                for="floating-Company-registration-number"
+                for="company-reg-num"
                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-purple-600 peer-focus:dark:text-purple-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >Company registration number</label
               >
@@ -398,29 +405,45 @@
               <div class="relative z-0 w-full mb-5 group">
                 <input
                   type="text"
-                  name="floating-first-name"
-                  id="floating-first-name"
+                  name="first-name"
+                  id="first-name"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-purple-500 focus:outline-none focus:ring-0 focus:border-purple-600 peer"
                   placeholder=" "
                   required
                 />
                 <label
-                  for="floating-first-name"
+                  for="first-name"
                   class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-purple-600 peer-focus:dark:text-purple-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                  >director name</label
+                  >first-name</label
                 >
               </div>
+              <div class="grid md:grid-cols-2 md:gap-6">
+                <div class="relative z-0 w-full mb-5 group">
+                  <input
+                    type="text"
+                    name="last-name"
+                    id="last-name"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-purple-500 focus:outline-none focus:ring-0 focus:border-purple-600 peer"
+                    placeholder=" "
+                    required
+                  />
+                  <label
+                    for="last-name"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-purple-600 peer-focus:dark:text-purple-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    >last-name</label
+                  >
+                </div>
               <div class="relative z-0 w-full mb-5 group">
                 <input
                   type="text"
-                  name="floating-last-name"
-                  id="floating-last-name"
+                  name="tenant-looking"
+                  id="tenant-looking"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-purple-500 focus:outline-none focus:ring-0 focus:border-purple-600 peer"
                   placeholder=" "
                   required
                 />
                 <label
-                  for="floating-last-name"
+                  for="tenant-looking"
                   class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-purple-600 peer-focus:dark:text-purple-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >what location you looking in
                 </label>
@@ -430,15 +453,15 @@
               <div class="relative z-0 w-full mb-5 group">
                 <input
                   type="tel"
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                  name="floating-phone"
-                  id="floating-phone"
+                 
+                  name="phone-number"
+                  id="phone-number"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-purple-500 focus:outline-none focus:ring-0 focus:border-purple-600 peer"
                   placeholder=" "
                   required
                 />
                 <label
-                  for="floating-phone"
+                  for="phone-number"
                   class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-purple-600 peer-focus:dark:text-purple-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >Phone number (123-456-7890)</label
                 >
@@ -490,14 +513,14 @@
               <div class="relative z-0 w-full mb-5 group">
                 <input
                   type="text"
-                  name="floating-company"
-                  id="floating-company"
+                  name="max-budget"
+                  id="max-budget"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-purple-500 focus:outline-none focus:ring-0 focus:border-purple-600 peer"
                   placeholder=" "
                   required
                 />
                 <label
-                  for="floating_company"
+                  for="max-budget"
                   class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-purple-600 peer-focus:dark:text-purple-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >WHAT IS YOUR MAXIMUM RENTAL BUDGET?*</label
                 >
@@ -505,14 +528,14 @@
               <div class="relative z-0 w-full mb-5 group">
                 <input
                   type="text"
-                  name="floating_company"
-                  id="floating_company"
+                  name="preferred-building"
+                  id="preferred-building"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-purple-500 focus:outline-none focus:ring-0 focus:border-purple-600 peer"
                   placeholder=" "
                   required
                 />
                 <label
-                  for="floating_company"
+                  for="preferred-building"
                   class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-purple-600 peer-focus:dark:text-purple-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >WHAT TYPE OF COMPANY LET ARE YOU?*</label
                 >
