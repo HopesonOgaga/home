@@ -6,122 +6,211 @@
     <link rel="stylesheet" href="./css/output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Fira+Sans:wght@200&family=Playfair+Display&family=Poppins:wght@100&family=Quicksand:wght@300&family=Roboto&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Fira+Sans:wght@200&family=Playfair+Display&family=Poppins:wght@100&family=Quicksand:wght@400&family=Roboto&family=Space+Grotesk:wght@400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+    <script src="../path/to/flowbite/dist/flowbite.min.js" defer></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js" defer></script>
+    <script src="./js/app-bundle.js" defer></script>
     <title>Document</title>
-  </head>
+  </head> 
+  
   <body class="font-playfair ">
-    <header class="mb-10 h-64  wall md:h-screen pl-6 pr-6">
-      <style>
-        .wall {
-          background-image: url(./images/wallpaper/castle-458058_1280.jpg);
-          background-repeat: no-repeat;
-          background-size: 100% 100%;
-        }
-      </style>
-      <section class="flex justify-between w-full md:py-12">
-        <div class="border-solid border-2 w-1/6  md:w-28 h-full bg-transparent  md:block">
-          <img
-            class="bg-transparent"
-            src="./images/logo_arch.png"
-            alt="image"
-            srcset=""
-          />
-        </div>
-        <div class="flex gap-10  text-white md:block hidden capitalize ">
-          <a
-            href="index.html"
-            target="_self"
-            class="capitalize font-semibold text-xl"
-            >home</a
-          >
-          <a
-            href="about.html"
-            target="_self"
-            class="capitalize font-semibold text-xl"
-            >about us</a
-          >
-          <a
-            href="company_tenants.html"
-            target="_self"
-            class="capitalize font-semibold text-xl"
-            >company tenants</a
-          >
-          <a
-            href="landlord.html"
-            target="_self"
-            class="capitalize font-semibold text-xl"
-            >for landlords</a
-          >
-          <a href="#" class="capitalize font-semibold text-xl">Documentation</a>
-          <a href="#" class="capitalize font-semibold text-xl">more +</a>
-        </div>
-        <div class="flex gap-6 md:block hidden ">
-          <input
-            class="w-24 h-12 bg-purple-400 border-solid border-2 rounded-sm shadow-sm capitalize font-semibold text-lg text-white"
-            type="button"
-            value="register"
-          />
-          <input
-            class="w-24 h-12 bg-purple-400 border-solid border-2 rounded-sm shadow-sm capitalize font-semibold text-lg text-white"
-            type="button"
-            value="login"
-          />
-        </div>
-        <!-- mobile view -->
-        <div class="md:hidden transition-all ease-in duration-500 absolute right-0">
-          <img src="./icons/menu-bar.png" class="w-10 open-menu " alt="">
-          <img src="./icons/menu-close.png" class="w-10 close-menu hidden " alt="">
-        </div>
-        <div class="  menu-options flex flex-col z-50 border-2 ml-0 mr-0  transition-all ease-in duration-500  border-solid rounded-sm shadow-sm py-10 mt-14  items-center w-screen h-full bg-purple-700  gap-10  text-white md:hidden opacity-90  capitalize ">
-          <a
-            href="index.html"
-            target="_self"
-            class="capitalize font-semibold text-xl"
-            >home</a
-          >
-          <a
-            href="about.html"
-            target="_self"
-            class="capitalize font-semibold text-xl"
-            >about us</a
-          >
-          <a
-            href="company_tenants.html"
-            target="_self"
-            class="capitalize font-semibold text-xl"
-            >company tenants</a
-          >
-          <a
-            href="landlord.html"
-            target="_self"
-            class="capitalize font-semibold text-xl"
-            >for landlords</a
-          >
-          <a href="#" class="capitalize font-semibold text-xl">Documentation</a>
-          <a href="#" class="capitalize font-semibold text-xl">more +</a>
-        </div>
-      </section>
-      <section class="flex flex-col mt-10  md:gap-20 justify-center items-center">
-        <a
-          href="#"
-          class="uppercase md:text-4xl text-xl  text-center font-medium md:font-semibold text-white"
-          >company tenants</a
+    <header class="">
+      <section class="">
+        <nav
+          class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700"
         >
+          <div
+            class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+          >
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img
+                src="./images/logo_arch.png"
+                class="w-12"
+                alt="Flowbite Logo"
+              />
+              <span
+                class="self-center text-xl font-semibold whitespace-nowrap dark:text-white italic text-purple-400"
+                >11th Hour Innovation</span
+              >
+            </a>
+            <button
+              data-collapse-toggle="navbar-dropdown"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-dropdown"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+              <ul
+                class="flex flex-col font-semibold p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+              >
+                <li>
+                  <a
+                    href="index.html"
+                    class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent capitalize font-semibold"
+                    aria-current="page"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <button
+                    id="dropdownNavbarLink"
+                    data-dropdown-toggle="dropdownNavbar"
+                    class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent capitalize font-semibold"
+                  >
+                    Dropdown
+                    <svg
+                      class="w-2.5 h-2.5 ms-2.5"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 4 4 4-4"
+                      />
+                    </svg>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div
+                    id="dropdownNavbar"
+                    class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                  >
+                    <ul
+                      class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                      aria-labelledby="dropdownLargeButton"
+                    >
+                      <li>
+                        <a
+                          href="compliance.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white capitalize font-semibold"
+                          >compliance</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="head of terms.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white capitalize font-semibold"
+                          >head of terms</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="contactus.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white capitalize font-semibold"
+                          >contact us</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="privacy.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white capitalize font-semibold"
+                          >privacy policy</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="nda.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white capitalize font-semibold"
+                          >nda</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="price.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white capitalize font-semibold"
+                          >our sourcing price</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    class="capitalize font-semibold block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    >about us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="company_tenants.html"
+                    class="capitalize font-semibold block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    >company tenant</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="landlord.html"
+                    class="capitalize font-semibold block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    >for landlords</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="flex md:flex-row flex-col gap-4 md:block hidden">
+              <input
+                class="w-24 h-10 bg-purple-400 border-solid border-2 rounded-md shadow-sm capitalize font-semibold text-sm md:text-lg text-white"
+                type="button"
+                value="register"
+              />
+              <input
+                class="w-24 h-10 bg-purple-400 border-solid border-2 rounded-md shadow-sm capitalize font-semibold text-sm md:text-lg text-white"
+                type="button"
+                value="login"
+              />
+            </div>
+          </div>
+        </nav>
+      </section>
+      <section class="wall w-full h-96  mb-8 ">
+        <style>
+          .wall {
+            background-image: url(./images/wallpaper/castle-458058_1280.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+          }
+        </style>
+        <div class="w-full h-full flex-col flex items-center justify-center ">
+          <p class="md:text-4xl text-center uppercase md:font-bold text-white text-lg "> privacy Policy </p>
+        </div>
       </section>
     </header>
-    <main class="ml-20 mr-20 ">
+    <main class="md:ml-20 md:mr-20 mr-8 ml-8  ">
       <section class=" ">
         <div>
-          <p class="text-4xl font-semibold uppercase text-yellow-400">
+          <p class="md:text-4xl text-xl font-medium md:font-semibold uppercase text-purple-400">
             privacy policy
           </p>
-          <div class="border-b-4 border-yellow-400 ... mb-6"></div>
+          <div class="border-b-4 border-purple-400 ... mb-6"></div>
         </div>
       </section>
 
       <section>
         <div>
-          <p class="w-2/3 font-thin text-lg leading-relaxed">
+          <p class="md:w-2/3 w-full font-thin md:text-base text-sm leading-relaxed">
             Last updated: May 04, 2020 This Privacy Policy describes Our
             policies and procedures on the collection, use and disclosure of
             Your information when You use the Service and tells You about Your
@@ -134,13 +223,13 @@
           </p>
         </div>
         <div>
-          <p class="text-yellow-400 font-semibold capitalize italic text-lg">
+          <p class="text-purple-400 font-semibold capitalize italic text-base">
             Interpretation and Definitions
           </p>
         </div>
         <div class="flex flex-col gap-4">
-          <p class="font-semibold text-lg capitalize">Interpretation</p>
-          <p class="w-2/3 font-thin text-lg leading-relaxed">
+          <p class="font-semibold text-base capitalize">Interpretation</p>
+          <p class="md:w-2/3 w-full font-thin md:text-base text-sm leading-relaxed">
             The words of which the initial letter is capitalized have meanings
             defined under the following conditions. The following definitions
             shall have the same meaning regardless of whether they appear in
@@ -149,15 +238,15 @@
         </div>
         <div>
           <ul class="flex flex-col gap-4 mb-4 pb-4 ">
-            <p class="text-2xl font-bold capitalize mb-4">
+            <p class="md:text-2xl text-lg font-semibold md:font-bold capitalize mb-2 mt-3  md:mb-4">
               Definitions
             </p>
-            <p class="text-lg font-sm  capitalize mb-2">
+            <p class="md:text-base text-sm font-sm  capitalize mb-2">
               For the purposes of this Privacy Policy:
             </p>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin ">
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                 <span class="font-bold capitalize">you</span> means the individual accessing or using the Service, or the
                 company, or other legal entity on behalf of which such
                 individual is accessing or using the Service,as applicable.
@@ -165,15 +254,14 @@
             </div>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin ">
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                 <span class="font-bold capitalize">company</span>  (referred to as either "the Company", "We", "Us" or
-                "Our" in this Agreement) refers to Smart Choice Property
-                Investments LTD, 20-22 Wenlock Road.
+                "Our" in this Agreement) refers to  11th Hour Innovation Properties LT, 128 city london ec1v, 2nx.
               </li>
             </div>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin ">
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                <span class="font-bold capitalize"> Affiliate </span> means an entity that controls, is controlled by or is
                 under common control with a party, where "control" means
                 ownership of 50% or more of the shares, equity interest or other
@@ -183,29 +271,29 @@
             </div>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin ">
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                 <span class="font-bold capitalize"> Account </span> means a unique account created for You to access our
                 Service or parts of our Service.
               </li>
             </div>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin ">
-                <span class="font-bold capitalize"> website </span> refers to Smart Choice Property Investments LTD,
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
+                <span class="font-bold capitalize"> website </span> refers to  11th Hour Innovation Properties LTD. All rights reserved.,
                 accessible from <a href="#">put company link </a>
               </li>
             </div>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin "><span class="font-bold capitalize">service </span> refers to the Website.</li>
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed "><span class="font-bold capitalize">service </span> refers to the Website.</li>
             </div>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin "> <span class="font-bold capitalize"> country </span> refers to: United Kingdom</li>
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed "> <span class="font-bold capitalize"> country </span> refers to: United Kingdom</li>
             </div>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin "><span class="font-bold capitalize"> Service Provider </span> means any natural or legal person who processes the data on behalf of the Company. 
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed "><span class="font-bold capitalize"> Service Provider </span> means any natural or legal person who processes the data on behalf of the Company. 
                   It refers to third-party companies or individuals employed by the Company to facilitate the Service, 
                   to provide the Service on behalf of the Company,
                  to perform services related to the Service or to assist the Company in analyzing how the Service is used.
@@ -213,27 +301,27 @@
             </div>
             <div class="flex gap-3">
                 <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-                <li class="text-lg font-thin "> <span class="font-bold capitalize"> Third-party Social Media Service </span> refers to any website or any social network website through which a 
+                <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed "> <span class="font-bold capitalize"> Third-party Social Media Service </span> refers to any website or any social network website through which a 
                     User can log in or create an account to use the Service.
                 </li>
               </div>
               <div class="flex gap-3">
                 <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-                <li class="text-lg font-thin "><span class="font-bold capitalize"> personal data </span> is any information that relates to an identified or identifiable individual.</li>
+                <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed "><span class="font-bold capitalize"> personal data </span> is any information that relates to an identified or identifiable individual.</li>
               </div>
               <div class="flex gap-3">
                 <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-                <li class="text-lg font-thin "> <span class="font-bold capitalize"> cookies </span> are small files that are placed on Your computer, mobile device or any other device by a website,
+                <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed "> <span class="font-bold capitalize"> cookies </span> are small files that are placed on Your computer, mobile device or any other device by a website,
                      containing the details of Your browsing history on that website among its many uses.
                 </li>
               </div>
               <div class="flex gap-3">
                 <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-                <li class="text-lg font-thin "> <span class="font-bold capitalize">device</span> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
+                <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed "> <span class="font-bold capitalize">device</span> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
               </div>
               <div class="flex gap-3">
                 <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-                <li class="text-lg font-thin " > <span class="font-bold capitalize"> usage data </span> refers to data collected automatically, either generated by the use of the Service or from 
+                <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed " > <span class="font-bold capitalize"> usage data </span> refers to data collected automatically, either generated by the use of the Service or from 
                     the Service infrastructure itself (for example, the duration of a page visit).
                 </li>
               </div>
@@ -241,45 +329,45 @@
         </div>
         <div class="mt-8 ">
             <p class="text-2xl font-bold capitalize mb-6  text-purple-400 ">Collecting and Using Your Personal Data</p>
-            <p class="text-lg font-medium capitalize">Types of data collected</p>
+            <p class="text-base font-medium capitalize">Types of data collected</p>
         </div>
         <section>
             <ul class="flex flex-col gap-4">
                 <p class="text-xl font-medium capitalize mt-2  mb-2">
                     Personal Data
                 </p>
-                <p class="text-lg font-sm leading-6 w-2/3  capitalize mb-4 font-thin">
+                <p class="md:w-2/3 w-full font-thin md:text-base text-sm leading-relaxed">
                     While using Our Service, We may ask You to provide Us with certain personally identifiable 
                     information that can be used to contact or identify You.
                      Personally identifiable information may include, but is not limited to:
                 </p>
                 <div class="flex gap-3">
                     <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-                    <li class="capitalize text-lg font-thin ">
+                    <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                       email
                     </li>
                   </div>
                 <div class="flex gap-3">
                   <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-                  <li class="capitalize text-lg font-thin ">
+                  <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                     First name and last name
                   </li>
                 </div>
                 <div class="flex gap-3">
                   <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-                  <li class="capitalize text-lg font-thin ">
+                  <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                     Phone number
                   </li>
                 </div>
                 <div class="flex gap-3">
                   <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-                  <li class="capitalize text-lg font-thin ">
+                  <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                     Address, State, Province, ZIP/Postal code, City
                   </li>
                 </div>
                 <div class="flex gap-3">
                   <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-                  <li class="capitalize text-lg font-thin ">
+                  <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                     Usage Data
                   </li>
                 </div>
@@ -287,7 +375,7 @@
         </section>
         <div class="flex flex-col gap-6 ">
             <p class="text-xl font-bold mt-8 ">Usage data</p>
-            <p class="w-3/4 font-thin leading-relaxed  text-base  mb-6">
+            <p class="md:w-3/4 w-full font-thin md:text-base text-sm leading-relaxed">
                 Usage Data is collected automatically when using the Service.
 
                Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address),
@@ -305,7 +393,7 @@
         </div>
         <div class="flex flex-col gap-6 ">
             <p class="text-xl font-bold mt-8 ">Tracking Technologies and Cookies</p>
-            <p class="w-3/4 font-thin leading-relaxed  text-base  mb-6">
+            <p class="md:w-3/4 w-full font-thin md:text-base text-sm leading-relaxed">
                 We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. 
                 Tracking technologies used are beacons, tags,
                  and scripts to collect and track information and to improve and analyze Our Service.
@@ -320,15 +408,15 @@
       </section>
       <section>
         <ul class="flex flex-col gap-6">
-            <p class="text-2xl font-bold text-yellow-300 capitalize mb-4">
+            <p class="md:text-2xl text-base font-medium md:font-bold text-purple-400 capitalize mb-4">
                 Use of your personal data
             </p>
-            <p class="text-lg font-sm text-yellow-300 capitalize mb-4">
+            <p class="text-base font-sm text-purple-400 capitalize mb-4">
                 The Company may use Personal Data for the following purposes:
             </p>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin w-3/4 leading-relaxed ">
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                  <span class="font-bold capitalize"> To manage Your Account:</span> to manage Your registration as a user of the Service. 
                 The Personal Data You provide can give You access to different functionalities
                  of the Service that are available to You as a registered user.
@@ -336,7 +424,7 @@
             </div>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin w-3/4 leading-relaxed ">
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                 <span class="font-bold capitalize"> For the performance of a contract:</span> the development, compliance and undertaking
                  of the purchase contract for the products,
                  items or services You have purchased or of any other contract with Us through the Service.
@@ -344,7 +432,7 @@
             </div>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin w-3/4 leading-relaxed ">
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                 <span class="font-bold capitalize"> To contact You: </span> To contact You by email, telephone calls, SMS, or 
                 other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or
                  informative communications related to the functionalities, products or contracted services,
@@ -353,7 +441,7 @@
             </div>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin w-3/4 leading-relaxed ">
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                <span class="font-bold capitalize"> To provide You with news  </span>, special offers and general information about other goods, 
                 services and events which we offer that are similar to those that you have already purchased or 
                 enquired about unless You have opted not to receive such information.
@@ -361,7 +449,7 @@
             </div>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin w-3/4 leading-relaxed ">
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                  <span class="font-bold capitalize"> To manage Your requests: </span> To attend and manage Your requests to Us.
               </li>
             </div>
@@ -371,22 +459,22 @@
       <section>
             <p class="font-semibold text-sm capitalize mt-4 mb-6 ">We may share your personal information in the following situations:</p>
             <ul class="flex flex-col gap-4">
-                <p class="text-2xl font-bold text-yellow-300 capitalize mb-4">
+                <p class="text-2xl font-bold text-purple-400 capitalize mb-4">
                     Use of your personal data
                 </p>
-                <p class="text-lg font-sm text-yellow-300 capitalize mb-4">
+                <p class="md:text-xl md:font-semibold text-base font-medium  text-purple-400 capitalize mb-4">
                     The Company may use Personal Data for the following purposes:
                 </p>
                 <div class="flex gap-3">
                   <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-                  <li class="text-lg font-thin w-3/4 leading-relaxed ">
+                  <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                     With Service Providers: We may share Your personal information with Service Providers to monitor and
                      analyze the use of our Service, to contact You.
                   </li>
                 </div>
                 <div class="flex gap-3">
                   <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-                  <li class="text-lg font-thin w-3/4 leading-relaxed ">
+                  <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                     For Business transfers: We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets,
                      financing, or acquisition of all or a portion of our business to another company.For the performance of a contract: the development, compliance and undertaking
                      of the purchase contract for the products,
@@ -395,7 +483,7 @@
                 </div>
                 <div class="flex gap-3">
                   <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-                  <li class="text-lg font-thin w-3/4 leading-relaxed ">
+                  <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                      With Affiliates: We may share Your information with Our affiliates,
                       in which case we will require those affiliates to honor this Privacy Policy. 
                      Affiliates include Our parent company and any other subsidiaries,
@@ -410,7 +498,7 @@
                 </div>
                 <div class="flex gap-3">
                   <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-                  <li class="text-lg font-thin w-3/4 leading-relaxed ">
+                  <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                      With other users: when You share personal information or otherwise interact in the public areas with other users, 
                      such information may be viewed by all users and may be publicly distributed outside. If You interact with other users or
                      register through a Third-Party Social Media Service, Your contacts on the Third-Party Social Media Service may see Your name, 
@@ -422,10 +510,10 @@
               </ul>
             
       </section>
-      <section class="flex-col gap-6 flex ">
+      <!-- <section class="flex-col gap-6 flex ">
         <div class="flex flex-col gap-4">
-            <p  class="text-xl font-bold mt-8 text-purple-400 ">Retention of your personal data</p>
-            <p class="w-3/4 font-thin leading-relaxed  text-base  mb-6">
+            <p class="md:text-xl md:font-bold font-semibold text-base mt-8 text-purple-400 ">Retention of your personal data</p>
+            <p class="md:w-3/4 w-full font-thin md:text-base text-sm leading-relaxed">
                The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy.
                We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations 
                (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, 
@@ -437,8 +525,8 @@
             </p>
         </div>
         <div  class="flex-col gap-4 flex ">
-            <p  class="text-xl font-bold mt-8 text-purple-400 ">Transfer of your personal data</p>
-            <p class="w-3/4 font-thin leading-relaxed  text-base  mb-6">
+            <p class="md:text-xl md:font-bold font-semibold text-base mt-8 text-purple-400 ">Transfer of your personal data</p>
+            <p class="md:w-3/4 w-full font-thin md:text-base text-sm leading-relaxed">
                 Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties 
                 involved in the processing are located. It means that this information may be transferred to — and maintained
                  on — computers located outside of Your state, 
@@ -454,7 +542,7 @@
         <div>
             <p class="text-xl font-bold mt-6 text-purple-400 ">Disclosure of your personal data</p>
             <p class="text-xl font-bold mt-6 mb-4 ">Business Transactions</p>
-            <p class="w-3/4 font-thin leading-relaxed  text-base  mb-6">
+            <p class="md:w-3/4 w-full font-thin md:text-base text-sm leading-relaxed">
                 If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. 
                 We will provide notice before Your Personal 
                 Data is transferred and becomes subject to a different Privacy Policy.
@@ -462,47 +550,48 @@
         </div>
         <div>
             <p class="text-xl font-bold mt-6 mb-4">law enforcement</p>
-            <p class="w-3/4 font-thin leading-relaxed  text-base  mb-6">Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or 
+            <p class="md:w-3/4 w-full font-thin md:text-base text-sm leading-relaxed">Under certain circumstances, 
+              the Company may be required to disclose Your Personal Data if required to do so by law or 
                 in response to valid requests by public authorities (e.g. a court or a government agency).
             </p>
         </div>
-      </section>
+      </section> -->
       <!-- shit who will read all this text  -->
       <section>
         <ul class="flex flex-col gap-4">
-            <p class="text-2xl font-bold text-yellow-300 capitalize mb-4">
+            <p class="md:text-2xl text-left font-medium md:font-bold text-purple-400 capitalize mb-4">
                 Other legal requirements
             </p>
-            <p class="text-lg font-sm text-yellow-300 capitalize mb-4">
+            <p class="md:text-base text-sm  md:font-semibold font-medium text-purple-400 capitalize mb-4">
                 The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:
             </p>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin w-3/4 leading-relaxed ">
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                 Comply with a legal obligation
               </li>
             </div>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin w-3/4 leading-relaxed ">
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                 Protect and defend the rights or property of the Company.
               </li>
             </div>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin w-3/4 leading-relaxed ">
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                 Prevent or investigate possible wrongdoing in connection with the Service
               </li>
             </div>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin w-3/4 leading-relaxed ">
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                 Protect the personal safety of Users of the Service or the public
               </li>
             </div>
             <div class="flex gap-3">
               <img class="w-4 h-4 mt-1" src="./icons/rec.png" alt="" />
-              <li class="text-lg font-thin w-3/4 leading-relaxed ">
+              <li class="md:text-base text-sm font-thin md:w-3/4 w-full leading-relaxed ">
                 Protect against legal liability
               </li>
           </ul>
@@ -510,35 +599,38 @@
       <!-- final section baby  -->
       <section>
             <div class="flex-col flex gap-4 ">
-                <p  class="text-xl font-bold mt-8 text-purple-400 ">Security of your personal data</p>
-                <p class="w-3/4 font-thin leading-relaxed  text-base  mb-6">
+                <p  class="md:text-xl md:font-bold font-semibold text-base mt-8 text-purple-400 ">Security of your personal data</p>
+                <p class="md:w-3/4 w-full  md:font-normal font-thin  leading-relaxed  text-sm mb-6">
                     The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet,
                      or method of electronic storage is 100% secure.
                      While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.
                 </p>
             </div>
             <div>
-                <p  class="text-xl font-bold mt-8 text-purple-400 ">Your California Privacy Rights (California's Shine the Light law)</p>
-                <p class="w-3/4 font-thin leading-relaxed  text-base  mb-6">
-                    Under California Civil Code Section 1798 (California's Shine the Light law), California residents with an established business 
-                    relationship with us can request information once a year about sharing their 
-                    Personal Data with third parties for the third parties' direct marketing purposes.
-                    If you'd like to request more information under the California Shine the Light law, and if you are a California resident, 
-                    You can contact Us using the contact information provided below.
+                <p class="md:text-xl md:font-bold font-semibold text-base mt-8 text-purple-400 ">Your Privacy Rights in the United Kingdom (United Kingdom's Privacy Laws)</p>
+                <p class="md:w-3/4 w-full  md:font-normal font-thin  leading-relaxed  text-sm mb-6">
+                  Under the United Kingdom's privacy laws, individuals residing in the United Kingdom who
+                   have an established business relationship with us have the right to request information 
+                   annually regarding the sharing of their Personal Data with third parties for
+                    direct marketing purposes. If you wish to obtain more details in accordance with the 
+                    relevant privacy laws in the United Kingdom, and you are a resident of the United Kingdom, 
+                  please contact us using the provided contact information below..
                 </p>
             </div>
             <div>
-                <p  class="text-xl font-bold mt-8 text-purple-400 ">California Privacy Rights for Minor Users (California Business and Professions Code Section 22581)</p>
-                <p class="w-3/4 font-thin leading-relaxed  text-base  mb-6">
-                    California Business and Professions Code section 22581 allow California residents under the age of 18 who are registered users of online sites, 
-                    services or applications to request and obtain removal of content or information they have publicly posted.
-                    To request removal of such data, and if you are a California resident, You can contact Us using the contact information provided below, and include the email address associated with Your account.
-                    Be aware that Your request does not guarantee complete or comprehensive removal of content or information posted online and that the law may not permit or require removal in certain circumstances.
+                <p class="md:text-xl md:font-bold font-semibold text-base mt-8 text-purple-400 ">United Kingdom Privacy Rights for Minor Users (United Kingdom Business and Professions Code Equivalent Section 22581)</p>
+                <p class="md:w-3/4 w-full  md:font-normal font-thin  leading-relaxed  text-sm mb-6">
+                  United Kingdom Business and Professions Code Section 22581 equivalent allows residents under 
+                  the age of 18 in the United Kingdom, who are registered users of online sites, services, or 
+                  applications, to request and obtain the removal of publicly posted content or information. 
+                  To make such a removal request, and if you are a resident of the United Kingdom,
+                   please contact us using the provided contact information below 
+                  and include the email address associated with your account.
                 </p>
             </div>
             <div>
-                <p  class="text-xl font-bold mt-8 text-purple-400 ">Links to Other Websites</p>
-                <p class="w-3/4 font-thin leading-relaxed  text-base  mb-6">
+                <p class="md:text-xl md:font-bold font-semibold text-base mt-8 text-purple-400 ">Links to Other Websites</p>
+                <p class="md:w-3/4 w-full  md:font-normal font-thin  leading-relaxed  text-sm mb-6">
                     Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, 
                     You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.
 
@@ -546,8 +638,8 @@
                 </p>
             </div>
             <div>
-                <p class="text-xl font-bold mt-8 text-purple-400 ">Changes to this Privacy Policy</p>
-                <p class="w-3/4 font-thin leading-relaxed  text-base  mb-6">
+                <p class="md:text-xl md:font-bold font-semibold text-base mt-8 text-purple-400 ">Changes to this Privacy Policy</p>
+                <p class="md:w-3/4 w-full  md:font-normal font-thin  leading-relaxed  text-sm  mb-6">
                     We may update our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.
                    We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the
                     "Last updated" date at the top of this Privacy Policy.
@@ -557,81 +649,11 @@
             </div>
             <!-- contact us -->
             <div>
-                <p  class="text-xl font-bold uppercase mb-4 ">contact us</p>
+                <p  class="text-base font-bold uppercase mb-2 h-full  ">contact us</p>
                 <a class="text-purple-400 hover:text-purple-500 active:text-black text-sm font-semibold " href="info@11thhourproperties.com">info@11thhourproperties.com</a>
             </div>
       </section>
     </main>
-    <div class="border-b-4 border-purple-500 ... mt-12"></div>
-    <footer class="bg-black text-white">
-      <section class="ml-6 mr-6 mb-16">
-        <div class="flex md:flex-row md:justify-evenly flex-col gap-4  py-6">
-          <div class="flex flex-col gap-4">
-            <!-- <div class="border-solid border-2 w-28 h-full bg-transparent">
-               <img
-                class="w-full h-full bg-transparent md:block hidden"
-                src="./images/logo_arch.png"
-                alt="image"
-                srcset=""
-              
-            </div> -->
-            <input
-              class="md:block hidden w-24 h-12 bg-purple-400 border-solid border-2 rounded-sm shadow-sm capitalize font-semibold text-lg text-white"
-              type="button"
-              value="login"
-            />
-          </div>
-          <div class="flex flex-col gap-4">
-            <p class="text-lg font-medium  md:font-bold md:text-2xl capitalize">quick links</p>
-            <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Compliances</a>
-            <a href="#"  class="text-xs md:text-lg font-light md:font-semibold ">Testimonials</a>
-            <a href="#"  class="text-xs md:text-lg font-light md:font-semibold ">Contact us</a>
-          </div>
-          <div class="flex flex-col gap-4">
-            <p  class="text-lg font-medium  md:font-bold md:text-2xl capitalize">popular search</p>
-            <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Rent your property</a>
-            <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Our prices</a>
-            <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">About the company</a>
-          </div>
-          <div class="flex flex-col gap-4">
-            <p class="text-lg font-medium  md:font-bold md:text-2xl capitalize">opening times</p>
-            <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Mon - Fri 10am - 6pm</a>
-            <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Sat 10am - 3pm</a>
-            <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Sun - Closed</a>
-            <a href="# " class="text-xs md:text-lg font-light md:font-semibold ">Bank Holidays - Closed</a>
-          </div>
-          <div class="flex flex-col gap-4">
-            <p class="text-lg font-medium  md:font-bold md:text-2xl capitalize">contact us</p>
-            <a href="mailto:info@smartchoicepropertyltd.com"  class="text-xs md:text-lg font-light md:font-semibold text-purple-400 hover:text-purple-500 active:text-purple-600">
-              info@smartchoicepropertyltd.com</a
-            > 
-            <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">0207 101 3679</a>
-            <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">20-22 Wenlock road, N1 7GU</a>
-          </div>
-        </div>
-      </section>
-
-      <div class="border-b-4 border-purple-500 ... mb-6"></div>
-      <section class="ml-6 mr-6 flex flex-col gap-4">
-        <p class="text-sm font-light leading-6 italic">
-          ©2020 Smart Choice Property Investments LTD All rights reserved. Smart
-          Choice Property Investments LTD is a sourcer for Rent to HMO
-          properties within the UK for Investors, Care providers & Social
-          housing providers, which is authorised and regulated by the Property
-          Redress Scheme for insurance mediation. Registered in England number
-          12565248. Registered office address: 193 Garth Road, Unit 14, London,
-          SM4 4LZ
-        </p>
-        <p class="text-sm font-light leading-6 italic">
-          Disclaimer: We are a sourcing company, we are not responsible for the
-          property after the tenancy start date. If you have taken the property
-          after doing your own due diligence and you are confident it meets your
-          requirements then we are not reliable if the property does not meet
-          your needs. Our sole purpose is to provide available properties but it
-          is ultimately your responsibility to do your own research before
-          committing to a property.
-        </p>
-      </section>
-    </footer>
+build/about.html
   </body>
 </html>
