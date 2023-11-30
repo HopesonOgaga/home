@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Fira+Sans:wght@200&family=Playfair+Display&family=Poppins:wght@100&family=Quicksand:wght@300&family=Roboto&family=Space+Grotesk:wght@300&display=swap"rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Fira+Sans:wght@200&family=Playfair+Display&family=Poppins:wght@100&family=Quicksand:wght@300&family=Roboto&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="./js/contact_map.js" defer ></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
   <script src="../path/to/flowbite/dist/flowbite.min.js" defer></script>
   <script  src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js" defer></script>
   <script src="./js/app-bundle.js" defer></script>
-  <link rel="stylesheet" href="./css/output.css" />
+  <script src="./js/contact_map.js" defer></script>
+  <link rel="stylesheet" href="./css/output.css">
     <title>Document</title>
 </head>
 <body >
@@ -197,111 +201,113 @@
       </div>
     </section>
   </header>
-    <main class="md:ml-20 md:mr-20 mr-8 ml-8 ">
+    <main class="-mt-60 z-50 bg-white ">
+       <section  class="md:ml-20 md:mr-20 mr-8 ml-8 ">
         <section>
           
-            <div>
-                <p class="text-4xl font-semibold uppercase text-purple-400 ">about us </p>
-                <div class="border-b-4 border-purple-400 ... mb-6 "></div>
-            </div>
-            <div>
-                <p class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto"> 
-                  11th Hour Innovation Properties LTD is a property sourcing  based in London, UK. Our main focus is sourcing 
-                  properties for Supported living, Care home provider, assisted living, and properties management. Additionally, we assist landlords in securing a guaranteed rent for their property through company lets, which can include Local authority contracts and Supported living arrangements. Since our establishment in early 2022, 
-                  we strive to become the leading providers of company let properties throughout the UK.
-                </p>
-            </div>
-            <div class="mt-8 flex flex-col gap-6  w-full h-full ">
-                <ul class="flex flex-col gap-4 ">
-                    <p class="text-2xl font-bold text-purple-300 capitalize mb-4 "> what we provide:</p>
-                     <div class="flex gap-3 ">
-                         <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
-                         <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">company let properties for </li>
-                     </div>
-                    <div class="flex gap-3 ">
-                     <img class="w-4 h-4 mt-1 "  src="./icons/rec.png" alt="">
-                     <li  class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">hmo for Supported living </li>
-                    </div>
-                    <div class="flex gap-3 ">
-                     <img class="w-4 h-4 mt-1 "  src="./icons/rec.png" alt="">
-                     <li  class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">single let unit for authority</li>
-                    </div>
-                    <div class="flex gap-3 ">
-                     <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
-                     <li  class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">block rental flats for local authority</li>
-                    </div>
-                </ul>
-                 <p class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto" >
-                  please note we are solely responsible for just sourcing the client.
-                   we do not take any responsibility for the actual performance of tenancy. investors must do their own due diligence
-                   before committing to any investments. we are a sourcing company only.
-                 </p>
-                 <ul class="flex flex-col gap-4 ">
-                   <p class="text-2xl font-bold text-purple-300 capitalize mb-4 "> Benefits for landlords:</p>
-                    <div class="flex gap-3 ">
-                        <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
-                        <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">Take on your property providing you a secure rent monthly</li>
-                    </div>
+          <div>
+              <p class="text-4xl font-semibold uppercase text-purple-400 ">about us </p>
+              <div class="border-b-4 border-purple-400 ... mb-6 "></div>
+          </div>
+          <div>
+              <p class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto"> 
+                11th Hour Innovation Properties LTD is a property sourcing  based in London, UK. Our main focus is sourcing 
+                properties for Supported living, Care home provider, assisted living, and properties management. Additionally, we assist landlords in securing a guaranteed rent for their property through company lets, which can include Local authority contracts and Supported living arrangements. Since our establishment in early 2022, 
+                we strive to become the leading providers of company let properties throughout the UK.
+              </p>
+          </div>
+          <div class="mt-8 flex flex-col gap-6  w-full h-full ">
+              <ul class="flex flex-col gap-4 ">
+                  <p class="text-2xl font-bold text-purple-300 capitalize mb-4 "> what we provide:</p>
                    <div class="flex gap-3 ">
-                    <img class="w-4 h-4 mt-1 "  src="./icons/rec.png" alt="">
-                    <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">Ideal for landlords who wants a complete hands off investment</li>
+                       <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
+                       <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">company let properties for </li>
                    </div>
+                  <div class="flex gap-3 ">
+                   <img class="w-4 h-4 mt-1 "  src="./icons/rec.png" alt="">
+                   <li  class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">hmo for Supported living </li>
+                  </div>
+                  <div class="flex gap-3 ">
+                   <img class="w-4 h-4 mt-1 "  src="./icons/rec.png" alt="">
+                   <li  class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">single let unit for authority</li>
+                  </div>
+                  <div class="flex gap-3 ">
+                   <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
+                   <li  class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">block rental flats for local authority</li>
+                  </div>
+              </ul>
+               <p class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto" >
+                please note we are solely responsible for just sourcing the client.
+                 we do not take any responsibility for the actual performance of tenancy. investors must do their own due diligence
+                 before committing to any investments. we are a sourcing company only.
+               </p>
+               <ul class="flex flex-col gap-4 ">
+                 <p class="text-2xl font-bold text-purple-300 capitalize mb-4 "> Benefits for landlords:</p>
+                  <div class="flex gap-3 ">
+                      <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
+                      <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">Take on your property providing you a secure rent monthly</li>
+                  </div>
+                 <div class="flex gap-3 ">
+                  <img class="w-4 h-4 mt-1 "  src="./icons/rec.png" alt="">
+                  <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">Ideal for landlords who wants a complete hands off investment</li>
+                 </div>
+                 <div class="flex gap-3 ">
+                  <img class="w-4 h-4 mt-1 "  src="./icons/rec.png" alt="">
+                  <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">Long term tenancy</li>
+                 </div>
+                 <div class="flex gap-3 ">
+                  <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
+                  <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">Potentially add value to properties</li>
+                 </div>
+              </ul>
+              <p>For more information please find our Landlord page.</p>
+              <ul class="flex flex-col gap-4 ">
+                  <p class="text-2xl font-bold text-purple-300 capitalize mb-4 "> Benefit for companies:</p>
                    <div class="flex gap-3 ">
-                    <img class="w-4 h-4 mt-1 "  src="./icons/rec.png" alt="">
-                    <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">Long term tenancy</li>
+                       <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
+                       <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">We do the negotiations to get you the best price</li>
                    </div>
-                   <div class="flex gap-3 ">
-                    <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
-                    <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">Potentially add value to properties</li>
-                   </div>
-                </ul>
-                <p>For more information please find our Landlord page.</p>
-                <ul class="flex flex-col gap-4 ">
-                    <p class="text-2xl font-bold text-purple-300 capitalize mb-4 "> Benefit for companies:</p>
-                     <div class="flex gap-3 ">
-                         <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
-                         <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">We do the negotiations to get you the best price</li>
-                     </div>
-                    <div class="flex gap-3 ">
-                     <img class="w-4 h-4 mt-1 "  src="./icons/rec.png" alt="">
-                     <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">We do the negotiations to get you the best price</li>
-                    </div>
-                    <div class="flex gap-3 ">
-                     <img class="w-4 h-4 mt-1 "  src="./icons/rec.png" alt="">
-                     <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">Long term agreements - usually 3 years plus</li>
-                    </div>
-                    <div class="flex gap-3 ">
-                     <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
-                     <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">Allow you to focus on the day to day management of your business whilst we deal with your new acquisitions</li>
-                    </div>
-                    <div class="flex gap-3 ">
-                        <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
-                        <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">Multiple properties to choose from on a regular basis</li>
-                    </div>
-                 </ul>
-               
-                <ul class="flex flex-col gap-2 "> 
-                    <p class="text-2xl font-bold text-purple-300 capitalize mb-4 ">Area's we cover</p>
-                    <div class="flex gap-3 ">
-                        <img class="w-4 h-4 mt-1 capitalize " src="./icons/rec.png" alt="">
-                        <li>London</li>
-                    </div>
-                    <div class="flex gap-3 ">
-                        <img class="w-4 h-4 mt-1 capitalize " src="./icons/rec.png" alt="">
-                        <li>west midlands</li>
-                    </div>
-                </ul>
-            </div>
-            <section>
-                <!-- live map -->
-                <div class="h-screen w-full" id="map"></div>
-            </section>
-        </section>
-        <section class="flex md:flex-row flex-col gap-4  md:justify-evenly mt-8 ">
-                <div><input type="button" class="text-white w-36 h-12 border-solid border-2 rounded-sm bg-purple-400 capitalize text-base font-semibold " value="for landlords"></div>
-                <div><input type="button" class="text-white w-36 h-12 border-solid border-2 rounded-sm bg-purple-400 capitalize text-base font-semibold " value="head of terms"></div>
-                <div><input type="button" class="text-white w-36 h-12 border-solid border-2 rounded-sm bg-purple-400 capitalize text-base font-semibold " value="company tenants"></div>
-        </section>
+                  <div class="flex gap-3 ">
+                   <img class="w-4 h-4 mt-1 "  src="./icons/rec.png" alt="">
+                   <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">We do the negotiations to get you the best price</li>
+                  </div>
+                  <div class="flex gap-3 ">
+                   <img class="w-4 h-4 mt-1 "  src="./icons/rec.png" alt="">
+                   <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">Long term agreements - usually 3 years plus</li>
+                  </div>
+                  <div class="flex gap-3 ">
+                   <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
+                   <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">Allow you to focus on the day to day management of your business whilst we deal with your new acquisitions</li>
+                  </div>
+                  <div class="flex gap-3 ">
+                      <img class="w-4 h-4 mt-1 " src="./icons/rec.png" alt="">
+                      <li class="font-thin md:w-3/4 w-full md:text-left  text-sm md:text-lg leading-relaxed  break-before-auto">Multiple properties to choose from on a regular basis</li>
+                  </div>
+               </ul>
+             
+              <ul class="flex flex-col gap-2 "> 
+                  <p class="text-2xl font-bold text-purple-300 capitalize mb-4 ">Area's we cover</p>
+                  <div class="flex gap-3 ">
+                      <img class="w-4 h-4 mt-1 capitalize " src="./icons/rec.png" alt="">
+                      <li>London</li>
+                  </div>
+                  <div class="flex gap-3 ">
+                      <img class="w-4 h-4 mt-1 capitalize " src="./icons/rec.png" alt="">
+                      <li>west midlands</li>
+                  </div>
+              </ul>
+          </div>
+          <section>
+              <!-- live map -->
+              <div class="h-screen w-full " id="map" ></div>
+          </section>
+      </section>
+      <section class="flex md:flex-row flex-col gap-4  md:justify-evenly mt-8 ">
+              <div><input type="button" class="text-white w-36 h-12 border-solid border-2 rounded-sm bg-purple-400 capitalize text-base font-semibold " value="for landlords"></div>
+              <div><input type="button" class="text-white w-36 h-12 border-solid border-2 rounded-sm bg-purple-400 capitalize text-base font-semibold " value="head of terms"></div>
+              <div><input type="button" class="text-white w-36 h-12 border-solid border-2 rounded-sm bg-purple-400 capitalize text-base font-semibold " value="company tenants"></div>
+      </section>
+       </section>
     </main>
     <!-- footer  -->
     <div class="border-b-4 border-purple-500 ... mt-12"></div>

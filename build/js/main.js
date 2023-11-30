@@ -1,5 +1,5 @@
 const form_submit = document.querySelector(".form-tenant");
-
+const land_form = document.getElementById("land-form");
 function sendMail() {
   let params = {
     email_address: document.getElementById("email-address").value,
@@ -38,6 +38,41 @@ form_submit.addEventListener("submit", function (e) {
   sendMail();
 });
 
+//landloard email
+
+function land_lord_mail() {
+  let info = {
+    land_lord_mail: document.getElementById("landlord-email").value,
+    land_lord_firstname: document.getElementById("landlord-first-name").value,
+    land_lord_lastname: document.getElementById("landlord-last-name").value,
+    phone_details: document.getElementById("floating_phone").value,
+    land_lord_address: document.getElementById("owner-addres").value,
+    preferred_property: document.getElementById("property-type").value,
+    living_rooms: document.getElementById("living-rooms").value,
+    number_bedroom: document.getElementById("property-type").value,
+    extra_informaiton: document.getElementById("extra-informaiton").value,
+    reason_renting: document.getElementById("reason-renting").value,
+    default_checkbox: document.getElementById("default-checkbox").checked
+      ? "Checked"
+      : "Unchecked", // Use checked property for checkboxes
+  };
+  const templateID = "template_trl6a35";
+  const serviceID = "sservice_qn83mcd";
+
+  emailjs
+    .send(serviceID, templateID, info)
+    .then((res) => {
+      // Reset form fields on successful submission
+      form_submit.reset();
+      console.log(res);
+      alert("Email sent successfully");
+    })
+    .catch((err) => {
+      console.error(err);
+      alert("Error sending email");
+    });
+}
+
 // mapn
 let map = document.getElementById("map");
 if (navigator.geolocation) {
@@ -61,7 +96,7 @@ if (navigator.geolocation) {
         .openPopup();
     },
     function () {
-      return null;
+      console.log('test')
     }
   );
 }
