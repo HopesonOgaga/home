@@ -12,7 +12,7 @@ if (navigator.geolocation) {
 
       L.marker([51.5272401, -0.0912403])
         .addTo(map)
-        .bindPopup("prosure solutions limited ")
+        .bindPopup("11th Hour Innovation Properties LTD")
         .openPopup();
     },
     function () {

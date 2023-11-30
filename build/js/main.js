@@ -69,6 +69,28 @@ function land_lord_mail() {
       alert("Error sending email");
     });
 }
+//contact us form
+function contact_us() {
+  contact = {
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value,
+  };
+  const templateID = "";
+  const serviceID = "";
+  emailjs
+    .send(serviceID, templateID, contact)
+    .then((res) => {
+      // Reset form fields on successful submission
+      form_submit.reset();
+      console.log(res);
+      alert("Email sent successfully");
+    })
+    .catch((err) => {
+      console.error(err);
+      alert("Error sending email");
+    });
+}
 
 // mapn
 let map = document.getElementById("map");
@@ -93,7 +115,7 @@ if (navigator.geolocation) {
         .openPopup();
     },
     function () {
-      console.log('test')
+      console.log("test");
     }
   );
 }
