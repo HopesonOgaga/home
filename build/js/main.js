@@ -3,17 +3,14 @@ const land_form = document.getElementById("land-form");
 function sendMail() {
   let params = {
     email_address: document.getElementById("email-address").value,
-    company_name: document.getElementById("company-name").value,
+    number_bedroom: document.getElementById("number-name").value,
     company_reg_num: document.getElementById("company-reg-num").value,
     first_name: document.getElementById("first-name").value,
     last_name: document.getElementById("last-name").value,
-    tenant_pre_location: document.getElementById("tenant-looking").value,
+    company_let_type: document.getElementById("company-let-type").value,
     phone_number: document.getElementById("phone-number").value,
-    default_checkbox: document.getElementById("default-checkbox").checked
-      ? "Checked"
-      : "Unchecked", // Use checked property for checkboxes
     budget_text: document.getElementById("max-budget").value,
-    building_type: document.getElementById("preferred-building").value,
+    location_type: document.getElementById("preferred-location").value,
   };
 
   const templateID = "template_trl6a35";
