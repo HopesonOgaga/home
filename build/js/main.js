@@ -14,7 +14,7 @@ function sendMail() {
   };
 
   const templateID = "template_trl6a35";
-  const serviceID = "service_6rwda4a";
+  const serviceID = "service_j8oc0um";
 
   emailjs
     .send(serviceID, templateID, params)
@@ -105,6 +105,7 @@ if (navigator.geolocation) {
       }).addTo(map);
 
       L.marker([51.5272401, -0.0912403])
+
         .addTo(map)
         .bindPopup("11th Hour Innovation Properties LTD")
         .openPopup();
