@@ -12,14 +12,8 @@
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js" defer></script>
     <script src="./js/app-bundle.js" defer></script>
     <script src="./js/main.js" defer></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-       <script type="text/javascript">
-   (function(){
-      emailjs.init("YOUR_PUBLIC_KEY");
-   })();
-</script>
+    <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script src=" https://smtpjs.com/v3/smtp.js" defer></script>
     <link rel="stylesheet" href="./css/output.css">
     <title>Document</title>
 </head>
@@ -40,7 +34,7 @@
             />
             <span
               class="self-center text-sm md:text-xl font-semibold whitespace-nowrap dark:text-white italic text-purple-400"
-              >11th Hour Innovation properties LTD</span
+              >11th Hour Innovation Properties LTD</span
             >
           </a>
           <button
@@ -380,7 +374,7 @@
                       <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
                           <h2 class="mb-6 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
                           <p class="mb-6 lg:mb-16 md:font-bold font-semibold text-center text-purple-500 dark:text-gray-400 sm:text-xl text-3xl">what are you looking for ?</p>
-                          <form action="#" class="space-y-8 form-tenant " >
+                          <form action="#" class="space-y-8 form-tenant land-submit " >
                               <div>
                                   <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300 capitalize">Your email</label>
                                   <input type="email" id="email-address" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@gmail.com" required>
@@ -422,7 +416,7 @@
                                   <textarea id="reason-renting" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
                               </div>
                              
-                              <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-purple-700 sm:w-fit hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-purple-800">Send message</button>
+                              <button type="submit" class="land-submit py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-purple-700 sm:w-fit hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-purple-800">Send message</button>
                           </form>
                       </div>
                     </section>
