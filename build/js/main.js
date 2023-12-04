@@ -4,7 +4,7 @@ const scrooll_landlord = document.querySelector(".scroll--landlord");
 const scroll_terms = document.querySelector(".scroll--terms");
 const scroll_tenants = document.querySelector(".scroll--tenants");
 const landlord_sc = document.getElementById("sc-form");
-const map_hidden = document.querySelector('.map--hidden')
+const map_hidden = document.querySelector(".map--hidden");
 
 //
 function sendMail() {
@@ -45,7 +45,7 @@ form_submit.addEventListener("submit", function (e) {
 //landloard email
 
 function land_lord_mail() {
-  let params = {
+  let info = {
     email_address: document.getElementById("email-address").value,
     property_type: document.getElementById("property-type").value,
     living_rooms: document.getElementById("number-living-room").value,
@@ -60,10 +60,10 @@ function land_lord_mail() {
     location_type: document.getElementById("preferred-location").value,
   };
   const templateID = "template_trl6a35";
-  const serviceID = "sservice_qn83mcd";
+  const serviceID = "service_qn83mcd";
 
   emailjs
-    .send(serviceID, templateID, params)
+    .send(serviceID, templateID, info)
     .then((res) => {
       // Reset form fields on successful submission
       form_submit.reset();
@@ -100,15 +100,18 @@ function contact_us() {
 
 // mapn
 let map = document.getElementById("map");
-let map_hidden = document.getElementById("map_hidden");
 
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(
     function (position) {
-      let map = L.map("map").setView([position.coords.latitude, position.coords.longitude], 13);
+      let map = L.map("map").setView(
+        [position.coords.latitude, position.coords.longitude],
+        13
+      );
 
       L.tileLayer("https://tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(map);
 
       L.marker([51.5272401, -0.0912403])
@@ -121,11 +124,13 @@ if (navigator.geolocation) {
         .bindPopup("11th Hour Innovation Properties LTD")
         .openPopup();
     },
+
     function (error) {
+      let map_hidden = document.getElementById("map_hidden");
       if (navigator.geolocation) {
-        map_hidden.classList.add('hidden');
+        map_hidden.classList.add("hidden");
       } else {
-        map_hidden.classList.remove('hidden');
+        map_hidden.classList.remove("hidden");
       }
       console.error("Error getting geolocation:", error.message);
     }
@@ -133,4 +138,3 @@ if (navigator.geolocation) {
 } else {
   console.error("Geolocation is not supported by this browser.");
 }
-
