@@ -1473,6 +1473,14 @@ input:checked + .toggle-bg {
   width: 100%;
 }
 
+.w-3\/6 {
+  width: 50%;
+}
+
+.w-3\/4 {
+  width: 75%;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -2859,6 +2867,10 @@ input:checked + .toggle-bg {
 
   .md\:text-left {
     text-align: left;
+  }
+
+  .md\:text-center {
+    text-align: center;
   }
 
   .md\:text-2xl {

@@ -1,5 +1,12 @@
 const form_submit = document.querySelector(".form-tenant");
 const land_form = document.getElementById("land-form");
+const scrooll_landlord = document.querySelector(".scroll--landlord");
+const scroll_terms = document.querySelector(".scroll--terms");
+const scroll_tenants = document.querySelector(".scroll--tenants");
+const landlord_sc = document.getElementById("sc-form");
+const map_hidden = document.querySelector('.map--hidden')
+
+//
 function sendMail() {
   let params = {
     email_address: document.getElementById("email-address").value,
@@ -14,7 +21,7 @@ function sendMail() {
   };
 
   const templateID = "template_trl6a35";
-  const serviceID = "service_6rwda4a" ;
+  const serviceID = "service_6rwda4a";
   // zoho "service_j8oc0um"
   emailjs
     .send(serviceID, templateID, params)
@@ -38,26 +45,25 @@ form_submit.addEventListener("submit", function (e) {
 //landloard email
 
 function land_lord_mail() {
-  let info = {
-    land_lord_mail: document.getElementById("landlord-email").value,
-    land_lord_firstname: document.getElementById("landlord-first-name").value,
-    land_lord_lastname: document.getElementById("landlord-last-name").value,
-    phone_details: document.getElementById("floating_phone").value,
-    land_lord_address: document.getElementById("owner-addres").value,
-    preferred_property: document.getElementById("property-type").value,
-    living_rooms: document.getElementById("living-rooms").value,
-    number_bedroom: document.getElementById("property-type").value,
-    extra_informaiton: document.getElementById("extra-informaiton").value,
-    reason_renting: document.getElementById("reason-renting").value,
-    default_checkbox: document.getElementById("default-checkbox").checked
-      ? "Checked"
-      : "Unchecked", // Use checked property for checkboxes
+  let params = {
+    email_address: document.getElementById("email-address").value,
+    property_type: document.getElementById("property-type").value,
+    living_rooms: document.getElementById("number-living-room").value,
+    additional_info: document.getElementById("additional--infomation").value,
+    reason_renting: document.getElementById("reason-renting"),
+    full_adress: document.getElementById("postcode").value,
+    first_name: document.getElementById("first-name").value,
+    last_name: document.getElementById("last-name").value,
+    company_let_type: document.getElementById("company-let-type").value,
+    phone_number: document.getElementById("phone-number").value,
+    budget_text: document.getElementById("max-budget").value,
+    location_type: document.getElementById("preferred-location").value,
   };
   const templateID = "template_trl6a35";
   const serviceID = "sservice_qn83mcd";
 
   emailjs
-    .send(serviceID, templateID, info)
+    .send(serviceID, templateID, params)
     .then((res) => {
       // Reset form fields on successful submission
       form_submit.reset();
@@ -94,18 +100,18 @@ function contact_us() {
 
 // mapn
 let map = document.getElementById("map");
+let map_hidden = document.getElementById("map_hidden");
+
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(
     function (position) {
-      let map = L.map("map").setView([51.5272401, -0.0912403], 13);
+      let map = L.map("map").setView([position.coords.latitude, position.coords.longitude], 13);
 
       L.tileLayer("https://tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(map);
 
       L.marker([51.5272401, -0.0912403])
-
         .addTo(map)
         .bindPopup("11th Hour Innovation Properties LTD")
         .openPopup();
@@ -115,8 +121,16 @@ if (navigator.geolocation) {
         .bindPopup("11th Hour Innovation Properties LTD")
         .openPopup();
     },
-    function () {
-      console.log("test");
+    function (error) {
+      if (navigator.geolocation) {
+        map_hidden.classList.add('hidden');
+      } else {
+        map_hidden.classList.remove('hidden');
+      }
+      console.error("Error getting geolocation:", error.message);
     }
   );
+} else {
+  console.error("Geolocation is not supported by this browser.");
 }
+
