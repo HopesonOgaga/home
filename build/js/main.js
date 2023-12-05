@@ -5,7 +5,9 @@ const scroll_terms = document.querySelector(".scroll--terms");
 const scroll_tenants = document.querySelector(".scroll--tenants");
 const landlord_sc = document.getElementById("sc-form");
 const map_hidden = document.querySelector(".map--hidden");
-const submit_land = document.getElementsByClassName(" land-submit");
+const land_btn = document.getElementById("land-submit");
+
+
 
 //
 function sendMail() {
@@ -43,73 +45,23 @@ form_submit.addEventListener("submit", function (e) {
   sendMail();
 });
 
-//landloard email
-
-// function land_lord_mail() {
-//   let info = {
-//     email_address: document.getElementById("email-address").value,
-//     property_type: document.getElementById("property-type").value,
-//     living_rooms: document.getElementById("number-living-room").value,
-//     additional_info: document.getElementById("additional--infomation").value,
-//     reason_renting: document.getElementById("reason-renting"),
-//     full_adress: document.getElementById("postcode").value,
-//     first_name: document.getElementById("first-name").value,
-//     last_name: document.getElementById("last-name").value,
-//     company_let_type: document.getElementById("company-let-type").value,
-//     phone_number: document.getElementById("phone-number").value,
-//     budget_text: document.getElementById("max-budget").value,
-//     location_type: document.getElementById("preferred-location").value,
-//   };
-//   const templateID = "template_trl6a35";
-//   const serviceID = "service_qn83mcd";
-
-//   emailjs
-//     .send(serviceID, templateID, info)
-//     .then((res) => {
-//       // Reset form fields on successful submission
-//       form_submit.reset();
-//       console.log(res);
-//       alert("Email sent successfully");
-//     })
-//     .catch((err) => {
-//       console.error(err);
-//       alert("Error sending email");
-// //     });
-// }
-
-submit_land.addEventListener("submit", function (e) {
-  e.preventDefault();
-  Email.send({
-    SecureToken: "C973D7AD-F097-4B95-91F4-40ABC5567812",
-    To: "hopesonogaga@gmail.com",
-    From: "hopesonogaga@gmail.com",
-    Subject: "testing",
-    Body: "testing",
+function land_lord_mail() {
+  let info = {
     email_address: document.getElementById("email-address").value,
     property_type: document.getElementById("property-type").value,
     living_rooms: document.getElementById("number-living-room").value,
     additional_info: document.getElementById("additional--infomation").value,
-    reason_renting: document.getElementById("reason-renting"),
+    reason_renting: document.getElementById("reason-renting").value, // Added .value here
     full_adress: document.getElementById("postcode").value,
     first_name: document.getElementById("first-name").value,
     last_name: document.getElementById("last-name").value,
-    company_let_type: document.getElementById("company-let-type").value,
     phone_number: document.getElementById("phone-number").value,
-    budget_text: document.getElementById("max-budget").value,
-    location_type: document.getElementById("preferred-location").value,
-  }).then((message) => alert(message));
-});
-//contact us form
-function contact_us() {
-  contact = {
-    email: document.getElementById("email").value,
-    subject: document.getElementById("subject").value,
-    message: document.getElementById("message").value,
   };
-  const templateID = "";
-  const serviceID = "";
+  const templateID = "template_trl6a35";
+  const serviceID = "service_6rwda4a";
+
   emailjs
-    .send(serviceID, templateID, contact)
+    .send(serviceID, templateID, info)
     .then((res) => {
       // Reset form fields on successful submission
       form_submit.reset();
@@ -122,7 +74,38 @@ function contact_us() {
     });
 }
 
-// mapn
+land_btn.addEventListener("submit", function (e) {
+  e.preventDefault();
+  land_lord_mail();
+});
+
+// email
+function contact_mail() {
+  let mail_info = {
+    email_address: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value,
+  };
+  const templateID = "template_dq1x46u";
+  const serviceID = "service_6rwda4a";
+
+  emailjs
+    .send(serviceID, templateID, mail_info)
+    .then((res) => {
+      // Reset form fields on successful submission
+      form_submit.reset();
+      console.log(res);
+      alert("Email sent successfully");
+    })
+    .catch((err) => {
+      console.error(err);
+      alert("Error sending email");
+    });
+}
+
+//contact us form
+
+// map
 let map = document.getElementById("map");
 
 if (navigator.geolocation) {

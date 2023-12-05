@@ -13,7 +13,12 @@
     <script src="./js/app-bundle.js" defer></script>
     <script src="./js/main.js" defer></script>
     <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-      <script src=" https://smtpjs.com/v3/smtp.js" defer></script>
+    <script src=" https://smtpjs.com/v3/smtp.js" defer></script>
+    <script type="text/javascript" defer>
+      (function(){
+            emailjs.init("SGuFAOwx5VAUXx2LS");
+       })();
+    </script>
     <link rel="stylesheet" href="./css/output.css">
     <title>Document</title>
 </head>
@@ -374,7 +379,7 @@
                       <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
                           <h2 class="mb-6 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
                           <p class="mb-6 lg:mb-16 md:font-bold font-semibold text-center text-purple-500 dark:text-gray-400 sm:text-xl text-3xl">what are you looking for ?</p>
-                          <form action="#" class="space-y-8 form-tenant land-submit " >
+                          <form action="#" class="space-y-8 form-tenant " id="land-submit" >
                               <div>
                                   <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300 capitalize">Your email</label>
                                   <input type="email" id="email-address" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@gmail.com" required>
