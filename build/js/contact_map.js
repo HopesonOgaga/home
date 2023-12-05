@@ -1,35 +1,6 @@
-const contact_btn = document.getElementById("contact-btn");
-const form_submit = document.getElementById("your-form-id"); // Replace "your-form-id" with your actual form ID
-
-function contact_us() {
-  let contact = {
-    email: document.getElementById("email").value,
-    subject: document.getElementById("subject").value,
-    message: document.getElementById("message").value,
-  };
-  const templateID = "template_dq1x46u";
-  const serviceID = "service_6rwda4a";
-
-  emailjs
-    .send(serviceID, templateID,  contact)
-    .then((res) => {
-      // Reset form fields on successful submission
-      form_submit.reset();
-      console.log(res);
-      alert("Email sent successfully");
-    })
-    .catch((err) => {
-      console.error(err);
-      alert("Error sending email");
-    });
-}
-
-// Assuming contact_btn is a form element
-form_submit.addEventListener("submit", function (e) {
-  e.preventDefault();
-  contact_us();
-});
 let map = document.getElementById("map");
+const form_cont = document.getElementById("your-form-id");
+
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(
     function (position) {
@@ -50,3 +21,30 @@ if (navigator.geolocation) {
     }
   );
 }
+
+function contact_mail() {
+  let mail_info = {
+    email_address: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value,
+  };
+  const templateID = "template_dq1x46u";
+  const serviceID = "service_6rwda4a";
+
+  emailjs
+    .send(serviceID, templateID, mail_info)
+    .then((res) => {
+      // Reset form fields on successful submission
+      form_cont.reset();
+      console.log(res);
+      alert("Email sent successfully");
+    })
+    .catch((err) => {
+      console.error(err);
+      alert("Error sending email");
+    });
+}
+form_cont.addEventListener("submit", function (e) {
+  e.preventDefault();
+  contact_us();
+});

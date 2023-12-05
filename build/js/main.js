@@ -1,4 +1,4 @@
-const form_submit = document.querySelector(".form-tenant");
+let form_submit = document.querySelector(".form-tenant");
 const land_form = document.getElementById("land-form");
 const scrooll_landlord = document.querySelector(".scroll--landlord");
 const scroll_terms = document.querySelector(".scroll--terms");
@@ -7,9 +7,6 @@ const landlord_sc = document.getElementById("sc-form");
 const map_hidden = document.querySelector(".map--hidden");
 const land_btn = document.getElementById("land-submit");
 
-
-
-//
 function sendMail() {
   let params = {
     email_address: document.getElementById("email-address").value,
@@ -25,7 +22,7 @@ function sendMail() {
 
   const templateID = "template_trl6a35";
   const serviceID = "service_6rwda4a";
-  // zoho "service_j8oc0um"
+
   emailjs
     .send(serviceID, templateID, params)
     .then((res) => {
@@ -51,12 +48,13 @@ function land_lord_mail() {
     property_type: document.getElementById("property-type").value,
     living_rooms: document.getElementById("number-living-room").value,
     additional_info: document.getElementById("additional--infomation").value,
-    reason_renting: document.getElementById("reason-renting").value, // Added .value here
+    reason_renting: document.getElementById("reason-renting").value,
     full_adress: document.getElementById("postcode").value,
     first_name: document.getElementById("first-name").value,
     last_name: document.getElementById("last-name").value,
     phone_number: document.getElementById("phone-number").value,
   };
+
   const templateID = "template_trl6a35";
   const serviceID = "service_6rwda4a";
 
@@ -64,7 +62,7 @@ function land_lord_mail() {
     .send(serviceID, templateID, info)
     .then((res) => {
       // Reset form fields on successful submission
-      form_submit.reset();
+      land_form.reset(); // Assuming land_form is your form element
       console.log(res);
       alert("Email sent successfully");
     })
@@ -74,36 +72,10 @@ function land_lord_mail() {
     });
 }
 
-land_btn.addEventListener("submit", function (e) {
+land_form.addEventListener("submit", function (e) {
   e.preventDefault();
   land_lord_mail();
 });
-
-// email
-function contact_mail() {
-  let mail_info = {
-    email_address: document.getElementById("email").value,
-    subject: document.getElementById("subject").value,
-    message: document.getElementById("message").value,
-  };
-  const templateID = "template_dq1x46u";
-  const serviceID = "service_6rwda4a";
-
-  emailjs
-    .send(serviceID, templateID, mail_info)
-    .then((res) => {
-      // Reset form fields on successful submission
-      form_submit.reset();
-      console.log(res);
-      alert("Email sent successfully");
-    })
-    .catch((err) => {
-      console.error(err);
-      alert("Error sending email");
-    });
-}
-
-//contact us form
 
 // map
 let map = document.getElementById("map");
