@@ -1,227 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Fira+Sans:wght@200&family=Playfair+Display&family=Poppins:wght@100&family=Quicksand:wght@300&family=Roboto&family=Space+Grotesk:wght@300&display=swap"rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
-  <script src="../path/to/flowbite/dist/flowbite.min.js" defer></script>
-  <script  src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js" defer></script>
-  <script src="./js/app-bundle.js" defer></script>
-  <link rel="stylesheet" href="./css/output.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue&family=Fira+Sans:wght@200&family=Playfair+Display&family=Poppins:wght@100&family=Quicksand:wght@300&family=Roboto&family=Space+Grotesk:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="../path/to/flowbite/dist/flowbite.min.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"
+      defer
+    ></script>
+    <script src="./js/app-bundle.js" defer></script>
+    <link rel="stylesheet" href="./css/output.css" />
     <title>Document</title>
-</head>
-<body class="font-playfair">
-  <header class="">
-    <section class="">
-      <nav
-        class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700"
-      >
-        <div
-          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+  </head>
+  <body class="font-playfair">
+    <header class="">
+      <section class="">
+        <nav
+          class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700"
         >
-          <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img
-              src="./images/logo_arch.png"
-              class="w-12"
-              alt="Flowbite Logo"
-            />
-            <span
-              class="self-center text-sm md:text-xl font-semibold whitespace-nowrap dark:text-white italic text-purple-400"
-              >11th Hour Innovation Properties LTD</span
-            >
-          </a>
-          <button
-            data-collapse-toggle="navbar-dropdown"
-            type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-dropdown"
-            aria-expanded="false"
+          <div
+            class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
           >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
+            <a
+              href="index.html"
+              class="flex items-center space-x-3 rtl:space-x-reverse"
             >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
+              <img
+                src="./images/logo_arch.png"
+                class="w-12"
+                alt="Flowbite Logo"
               />
-            </svg>
-          </button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-            <ul
-              class="flex flex-col font-semibold p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+              <span
+                class="self-center text-sm md:text-xl font-semibold whitespace-nowrap dark:text-white italic text-purple-400"
+                >11th Hour Innovation Properties LTD</span
+              >
+            </a>
+            <button
+              data-collapse-toggle="navbar-dropdown"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-dropdown"
+              aria-expanded="false"
             >
-              <li>
-                <a
-                  href="index.html"
-                  class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent capitalize font-semibold"
-                  aria-current="page"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <button
-                  id="dropdownNavbarLink"
-                  data-dropdown-toggle="dropdownNavbar"
-                  class="capitalize flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent  font-semibold"
-                >
-                  more
-                  <svg
-                    class="w-2.5 h-2.5 ms-2.5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+              <ul
+                class="flex flex-col font-semibold p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+              >
+                <li>
+                  <a
+                    href="index.html"
+                    class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent capitalize font-semibold"
+                    aria-current="page"
+                    >Home</a
                   >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m1 1 4 4 4-4"
-                    />
-                  </svg>
-                </button>
-                <!-- Dropdown menu -->
-                <div
-                  id="dropdownNavbar"
-                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                >
-                  <ul
-                    class="py-2 text-sm text-gray-700 dark:text-gray-400"
-                    aria-labelledby="dropdownLargeButton"
+                </li>
+                <li>
+                  <button
+                    id="dropdownNavbarLink"
+                    data-dropdown-toggle="dropdownNavbar"
+                    class="capitalize flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent font-semibold"
                   >
-                    <li>
-                      <a
-                        href="compliance.html"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white capitalize font-semibold"
-                        >compliance</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="head of terms.html"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white capitalize font-semibold"
-                        >head of terms</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="contactus.html"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white capitalize font-semibold"
-                        >contact us</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="privacy.html"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white capitalize font-semibold"
-                        >privacy policy</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="nda.html"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white uppercase font-semibold"
-                        >nda</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="price.html"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white capitalize font-semibold"
-                        >our sourcing price</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <a
-                  href="about.html"
-                  class="capitalize font-semibold block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                  >about us</a
-                >
-              </li>
-              <li>
-                <a
-                  href="company_tenants.html"
-                  class="capitalize font-semibold block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                  >company tenant</a
-                >
-              </li>
-              <li>
-                <a
-                  href="landlord.html"
-                  class="capitalize font-semibold block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                  >for landlords</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="flex md:flex-row flex-col gap-4  hidden">
-            <input
-              class="w-24 h-10 bg-purple-400 border-solid border-2 rounded-md shadow-sm capitalize font-semibold text-sm md:text-lg text-white"
-              type="button"
-              value="register"
-            />
-            <input
-              class="w-24 h-10 bg-purple-400 border-solid border-2 rounded-md shadow-sm capitalize font-semibold text-sm md:text-lg text-white"
-              type="button"
-              value="login"
-            />
-          </div>
-        </div> 
-      </nav>
-    </section>
-    <section class="wall  md:h-screen h-96   mb-8 ">
-      <style>
-        .wall {
-          background-image: url(./images/wallpaper/castle-458058_1280.jpg);
-          background-repeat: no-repeat;
-          background-size: 100% 100%;
-        }
-      </style>
-      <div class="w-full h-full flex-col flex  items-center justify-center mt-10">
-        <p class="md:text-4xl text-center uppercase md:font-bold text-white text-lg "> compliance </p>
-      </div>
-    </section>
-  </header>
-      <main class="-mt-32 md:-mt-60 z-50 b bg-white h-48 md:h-96  flex flex-col items-center justify-center" >
-           <section class="md:mr-20 md:ml-20 mr-8 ml-8  ">
-                  <div class="flex w-full h-full flex-col items-start  gap-4 ">
-                         <div>
-                          <p class="font-semibold md:text-2xl text-sm uppercase ">Property Redress Scheme: prso42879</p>
-                         </div>
-                        <div>
-                          <p class="font-semibold md:text-2xl  text-sm uppercase ">I.C.O: zb629378</p>
-                        </div>
-                       <div>
-                        <p class="font-semibold md:text-2xl text-sm capitalize "> Professional indemnity insurance</p>
-                       </div>
-                      <div>
-                        <p class="font-semibold md:text-2xl text-sm capitalize ">prosure solutions limited : 124647859</p>
-                      </div>
+                    more
+                    <svg
+                      class="w-2.5 h-2.5 ms-2.5"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 4 4 4-4"
+                      />
+                    </svg>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div
+                    id="dropdownNavbar"
+                    class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                  >
+                    <ul
+                      class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                      aria-labelledby="dropdownLargeButton"
+                    >
+                      <li>
+                        <a
+                          href="compliance.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white capitalize font-semibold"
+                          >compliance</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="head of terms.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white capitalize font-semibold"
+                          >head of terms</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="contactus.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white capitalize font-semibold"
+                          >contact us</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="privacy.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white capitalize font-semibold"
+                          >privacy policy</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="nda.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white uppercase font-semibold"
+                          >nda</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="price.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white capitalize font-semibold"
+                          >our sourcing price</a
+                        >
+                      </li>
+                    </ul>
                   </div>
-           </section>
-      </main>
-      <!-- footer -->
-      <div class="border-b-4 border-purple-500 ... mt-12"></div>
-     <footer class="bg-black text-white">
-       <section class="ml-6 mr-6 mb-16">
-         <div class="flex md:flex-row md:justify-evenly flex-col gap-4  py-6">
-           <!-- <div class="flex flex-col gap-4"> -->
-             <!-- <div class="border-solid border-2 w-28 h-full bg-transparent">
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    class="capitalize font-semibold block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    >about us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="company_tenants.html"
+                    class="capitalize font-semibold block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    >company tenant</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="landlord.html"
+                    class="capitalize font-semibold block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    >for landlords</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="flex md:flex-row flex-col gap-4 hidden">
+              <input
+                class="w-24 h-10 bg-purple-400 border-solid border-2 rounded-md shadow-sm capitalize font-semibold text-sm md:text-lg text-white"
+                type="button"
+                value="register"
+              />
+              <input
+                class="w-24 h-10 bg-purple-400 border-solid border-2 rounded-md shadow-sm capitalize font-semibold text-sm md:text-lg text-white"
+                type="button"
+                value="login"
+              />
+            </div>
+          </div>
+        </nav>
+      </section>
+      <section class="wall md:h-screen h-96 mb-8">
+        <style>
+          .wall {
+            background-image: url(./images/wallpaper/castle-458058_1280.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+          }
+        </style>
+        <div
+          class="w-full h-full flex-col flex items-center justify-center mt-10"
+        >
+          <p
+            class="md:text-4xl text-center uppercase md:font-bold text-white text-lg"
+          >
+            compliance
+          </p>
+        </div>
+      </section>
+    </header>
+    <main
+      class="-mt-32 md:-mt-60 z-50 b bg-white h-48 md:h-96 flex flex-col items-center justify-center"
+    >
+      <section class="md:mr-20 md:ml-20 mr-8 ml-8">
+        <div class="flex w-full h-full flex-col items-start gap-4">
+          <div>
+            <p class="font-semibold md:text-2xl text-sm uppercase">
+              Property Redress Scheme: prso42879
+            </p>
+          </div>
+          <div>
+            <p class="font-semibold md:text-2xl text-sm uppercase">
+              I.C.O: ZB629378
+            </p>
+          </div>
+          <div>
+            <p class="font-semibold md:text-2xl text-sm capitalize">
+              Professional Indemnity Insurance
+            </p>
+          </div>
+          <div>
+            <p class="font-semibold md:text-2xl text-sm capitalize">
+              prosure solutions limited : PRSO42879
+            </p>
+          </div>
+          <div>
+            <p class="font-semibold md:text-2xl text-sm capitalize">
+              policy number : CHBS4775219XB
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <div class="border-b-4 border-purple-500 ... mt-12"></div>
+    <footer class="bg-black text-white">
+      <section class="ml-6 mr-6 mb-16">
+        <div class="flex md:flex-row md:justify-evenly flex-col gap-4 py-6">
+          <!-- <div class="flex flex-col gap-4"> -->
+          <!-- <div class="border-solid border-2 w-28 h-full bg-transparent">
                 <img
                  class="w-full h-full bg-transparent md:block hidden"
                  src="./images/logo_arch.png"
@@ -229,74 +262,148 @@
                  srcset=""
                
              </div> -->
-             <!-- <input
+          <!-- <input
                class="md:block hidden w-24 h-12 bg-purple-400 border-solid border-2 rounded-sm shadow-sm capitalize font-semibold text-lg text-white"
                type="button"
                value="login"
              />
            </div> -->
-           <div class="flex flex-col gap-4">
-             <p class="text-lg font-medium  md:font-bold md:text-2xl capitalize">quick links</p>
-             <a href="compliance.html" target="_self" class="text-xs md:text-lg font-light md:font-semibold ">Compliances</a>
-             <a href="#"  class="text-xs md:text-lg font-light md:font-semibold ">Testimonials</a>
-             <a href="contactus.html" target="_self"  class="text-xs md:text-lg font-light md:font-semibold ">Contact us</a>
-           </div>
-           <div class="flex flex-col gap-4">
-             <p  class="text-lg font-medium  md:font-bold md:text-2xl capitalize">popular search</p>
-             <a href="landlord.html" class="text-xs md:text-lg font-light md:font-semibold ">Rent your property</a>
-             <a href="price.html" target="_self" class="text-xs md:text-lg font-light md:font-semibold ">Our prices</a>
-             <a href="about.html" class="text-xs md:text-lg font-light md:font-semibold ">About the company</a>
-           </div>
-           <div class="flex flex-col gap-4">
-             <p class="text-lg font-medium  md:font-bold md:text-2xl capitalize">opening times</p>
-             <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Mon - Fri 10am - 6pm</a>
-             <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Sat 10am - 3pm</a>
-             <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">Sun - Closed</a>
-             <a href="# " class="text-xs md:text-lg font-light md:font-semibold ">Bank Holidays - Closed</a>
-           </div>
-           <div class="flex flex-col gap-4">
-             <p class="text-lg font-medium  md:font-bold md:text-2xl capitalize">contact us</p>
-             <a href="mailto:info@11thhourproperties.com"  class="text-xs md:text-lg font-light md:font-semibold text-purple-400 hover:text-purple-500 active:text-purple-600">
-               info@11thhourproperties.com</a
-             > 
-             <a href="#" class="text-xs md:text-lg font-light md:font-semibold ">0208 058 4071</a>
-             <a href="#" class="text-xs md:text-lg font-light md:font-semibold uppercase">Flat 5, 83 New Church Street,  Camberwell SE5 7JR  United Kingdom</a>
-             <div class="flex gap-4 ">
+          <div class="flex flex-col gap-4">
+            <p class="text-lg font-medium md:font-bold md:text-2xl capitalize">
+              quick links
+            </p>
+            <a
+              href="compliance.html"
+              target="_self"
+              class="text-xs md:text-lg font-light md:font-semibold"
+              >Compliances</a
+            >
+            <a href="#" class="text-xs md:text-lg font-light md:font-semibold"
+              >Testimonials</a
+            >
+            <a
+              href="contactus.html"
+              target="_self"
+              class="text-xs md:text-lg font-light md:font-semibold"
+              >Contact us</a
+            >
+          </div>
+          <div class="flex flex-col gap-4">
+            <p class="text-lg font-medium md:font-bold md:text-2xl capitalize">
+              popular search
+            </p>
+            <a
+              href="landlord.html"
+              class="text-xs md:text-lg font-light md:font-semibold"
+              >Rent your property</a
+            >
+            <a
+              href="price.html"
+              target="_self"
+              class="text-xs md:text-lg font-light md:font-semibold"
+              >Our prices</a
+            >
+            <a
+              href="about.html"
+              class="text-xs md:text-lg font-light md:font-semibold"
+              >About the company</a
+            >
+          </div>
+          <div class="flex flex-col gap-4">
+            <p class="text-lg font-medium md:font-bold md:text-2xl capitalize">
+              opening times
+            </p>
+            <a href="#" class="text-xs md:text-lg font-light md:font-semibold"
+              >Mon - Fri 10am - 6pm</a
+            >
+            <a href="#" class="text-xs md:text-lg font-light md:font-semibold"
+              >Sat 10am - 3pm</a
+            >
+            <a href="#" class="text-xs md:text-lg font-light md:font-semibold"
+              >Sun - Closed</a
+            >
+            <a href="# " class="text-xs md:text-lg font-light md:font-semibold"
+              >Bank Holidays - Closed</a
+            >
+          </div>
+          <div class="flex flex-col gap-4">
+            <p class="text-lg font-medium md:font-bold md:text-2xl capitalize">
+              contact us
+            </p>
+            <a
+              href="mailto:info@11thhourproperties.com"
+              class="text-xs md:text-lg font-light md:font-semibold text-purple-400 hover:text-purple-500 active:text-purple-600"
+            >
+              info@11thhourproperties.com</a
+            >
+            <a href="#" class="text-xs md:text-lg font-light md:font-semibold"
+              >0208 058 4071</a
+            >
+            <a
+              href="#"
+              class="text-xs md:text-lg font-light md:font-semibold uppercase"
+              >Flat 5, 83 New Church Street, Camberwell SE5 7JR
+              United Kingdom</a
+            >
+            <div class="flex gap-4">
               <div>
-                 <a href="https://www.facebook.com/Eleventhhourinnovationcompany?mibextid=ZbWKwL" target="_blank"><img class="bg-purple-400 w-8 h-8  border-none" src="./icons/facebook.png" alt="" srcset=""></a>
+                <a
+                  href="https://www.facebook.com/Eleventhhourinnovationcompany?mibextid=ZbWKwL"
+                  target="_blank"
+                  ><img
+                    class="bg-purple-400 w-8 h-8 border-none"
+                    src="./icons/facebook.png"
+                    alt=""
+                    srcset=""
+                /></a>
               </div>
               <div>
-                <a href=" https://instagram.com/11th_hours_innovation?igshid=NGVhN2U2NjQ0Yg==
-                " target="_blank"><img class="bg-purple-400 w-8 h-8 border-none "  src="./icons/instagram.png" alt="" srcset=""></a>
-               </div>
+                <a
+                  href=" https://instagram.com/11th_hours_innovation?igshid=NGVhN2U2NjQ0Yg==
+                "
+                  target="_blank"
+                  ><img
+                    class="bg-purple-400 w-8 h-8 border-none"
+                    src="./icons/instagram.png"
+                    alt=""
+                    srcset=""
+                /></a>
+              </div>
               <div>
-                <a href=" https://www.linkedin.com/in/johnmark-esajobor-4769b025b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img class="bg-purple-400 border-none w-8 h-8 " src="./icons/linkedin (1).png" alt=""></a>
-               </div>
-           </div>
-           </div>
-          
-         </div>
-       </section>
- 
-       <div class="border-b-4 border-purple-500 ... mb-6"></div>
-       <section class="ml-6 mr-6 flex flex-col gap-4">
-         <p class="text-sm font-light leading-6 italic">
-           ©2022 11th Hour Innovation Properties LTD. All rights reserved. 11th Hour Innovation Properties LTD, 
-           a Rent to HMO property sourcing
-           entity within the UK, caters to investors, care providers, and social
-           housing providers. It is authorized and regulated by the Property
-           Redress Scheme for insurance mediation. Registered in England with
-           number 14563317, its registered office address is 128 city london EC1V
-           2NX.
-         </p>
-         <p class="text-sm font-light leading-6 italic">
-           Disclaimer: As a sourcing company, we do not assume responsibility for
-            the property once the tenancy starts. If you have conducted your own due diligence
-             and are assured that the property aligns with your requirements, we cannot be held 
-             accountable if it fails to meet your needs. Our primary objective is to offer available properties, 
-           but it is your responsibility to thoroughly research a property before making a commitment.
-         </p>
-       </section>
-     </footer>
-</body>
+                <a
+                  href=" https://www.linkedin.com/in/johnmark-esajobor-4769b025b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank"
+                  ><img
+                    class="bg-purple-400 border-none w-8 h-8"
+                    src="./icons/linkedin (1).png"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="border-b-4 border-purple-500 ... mb-6"></div>
+      <section class="ml-6 mr-6 flex flex-col gap-4">
+        <p class="text-sm font-light leading-6 italic">
+          ©2022 11th Hour Innovation Properties LTD. All rights reserved. 11th
+          Hour Innovation Properties LTD, a Rent to HMO property sourcing entity
+          within the UK, caters to investors, care providers, and social housing
+          providers. It is authorized and regulated by the Property Redress
+          Scheme for insurance mediation. Registered in England with number
+          14563317, its registered office address is 128 city london EC1V 2NX.
+        </p>
+        <p class="text-sm font-light leading-6 italic">
+          Disclaimer: As a sourcing company, we do not assume responsibility for
+          the property once the tenancy starts. If you have conducted your own
+          due diligence and are assured that the property aligns with your
+          requirements, we cannot be held accountable if it fails to meet your
+          needs. Our primary objective is to offer available properties, but it
+          is your responsibility to thoroughly research a property before making
+          a commitment.
+        </p>
+      </section>
+    </footer>
+  </body>
 </html>
